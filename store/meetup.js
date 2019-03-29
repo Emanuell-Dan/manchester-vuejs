@@ -28,11 +28,11 @@ export const mutations = {
 
 export const actions = {
 	async getPastEvents(store) {
-		const response = await Axios.get(url +	group +	'/events?&sign=' + isSigned + '&photo-host=' + photoHost + '&status=' +	status);
+		const response = await Axios.get(url + group +	'/events?&sign=' + isSigned + '&photo-host=' + photoHost + '&status=' +	status);
 		store.commit('storePastEvents', response.data);
 	},
 	async getFutureEvents(store) {
-		const response = await Axios.get(url + 'BlockchainManchesterMeetup' + '/events?&sign=' +	isSigned + '&photo-host=' +	photoHost);
+		const response = await Axios.get(url + 'CoinFestUK' + '/events?&sign=' +	isSigned + '&photo-host=' +	photoHost);
 		store.commit('storeFutureEvents', response.data);
 	}
 };

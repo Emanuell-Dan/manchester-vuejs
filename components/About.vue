@@ -1,7 +1,7 @@
 <template>
   <div 
-    ref="about"
-    class="about py-16">
+    id="about"
+    class="pt-16">
     <h2 class="about__title text-vue-brand text-center mobile:text-xl text-4xl mb-8">What we're about</h2>
 			
     <div class="about__content text-base">

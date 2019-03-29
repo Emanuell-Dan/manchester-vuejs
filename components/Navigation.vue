@@ -10,7 +10,8 @@
         <li 
           v-for="(item, index) in navItems"
           :key="index"
-          class="cursor-pointer mobile:my-1 tablet:mx-2">{{ item }}
+          class="cursor-pointer mobile:my-1 tablet:mx-2"
+          @click="$emit('scrollToSection', item)">{{ item }}
         </li>
       </ul>
     </nav>

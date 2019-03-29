@@ -1,6 +1,6 @@
 <template>
   <div class="landing">
-    <navigation />
+    <navigation @scrollToSection="scrollToSection" />
     <banner />
 
     <div class="bg-white text-black">
@@ -20,12 +20,12 @@
 <script>
 import {mapState} from 'vuex';
 
-import Navigation from '~/components/Navigation.vue';
-import Banner from '~/components/Banner.vue';
-import About from '~/components/About.vue';
-import FutureEvents from '~/components/FutureEvents.vue';
-import PastEvents from '~/components/PastEvents.vue';
-import Resources from '~/components/Resources.vue';
+import Navigation from '~/components/Navigation';
+import Banner from '~/components/Banner';
+import About from '~/components/About';
+import FutureEvents from '~/components/FutureEvents';
+import PastEvents from '~/components/PastEvents';
+import Resources from '~/components/Resources';
 
 export default {
 	components: {
@@ -34,13 +34,19 @@ export default {
 		About,
 		FutureEvents,
 		PastEvents,
-		Resources
+    Resources
 	},
   computed: {
     ...mapState(['meetup'])
   },
   mounted() {
     console.log(this.meetup.pastEvents[2]);
+  },
+  methods: {
+    scrollToSection(section) {
+      const sectionId = section.toLowerCase().split(' ').join('-');
+      this.$el.querySelector(`#${sectionId}`).scrollIntoView({ behavior: 'smooth' });
+    }
   }
 };
 </script>
