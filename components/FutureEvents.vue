@@ -12,13 +12,13 @@
         <p>{{ event.yes_rsvp_count }} {{ getAttendeesLimit }} going</p> 
       </div>
       <div>
-            <p class="pb-2">{{ getDateAndTime(event.time) }}</p>
+        <p class="pb-2">{{ getDateAndTime(event.time) }}</p>
         <p>{{ event.venue.name }}</p>
         <p>{{ event.venue.address_1 }}</p>
         <p>{{ event.venue.address_2 }}</p>
       </div>
     </div>
-    <lightbox :event="event" />
+    <!-- <lightbox :event="event" /> -->
   </div>
 </template>
 

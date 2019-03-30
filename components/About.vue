@@ -15,7 +15,7 @@
 
       <div class="tablet:flex tablet:justify-between">
         <p class="mb-4">Thanks and I hope you will all be joining us,<br>Emanuell &amp; the MoneySuperMarket team</p>
-        <div class="mobile:pt-8 about__social flex items-center">
+        <div class="mobile:pt-2 about__social flex items-center">
           <p class="font-bold mr-4">Find us on:</p>
           <ul class="list-reset flex items-center">
             <li class="mr-4">

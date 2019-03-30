@@ -41,6 +41,14 @@ ul {
 }
 
 li {
-  flex-basis: 48%;
+  flex-basis: 100%;
+  
+  @media (min-width: 768px) {
+    flex-basis: 47%;
+  }
+
+  @media (min-width: 992px) {
+    flex-basis: 48%;
+  }
 }
 </style>
