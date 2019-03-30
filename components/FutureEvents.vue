@@ -12,7 +12,7 @@
         <p>{{ event.yes_rsvp_count }} {{ getAttendeesLimit }} going</p> 
       </div>
       <div>
-        <p class="pb-2">{{ event.local_date }} at {{ event.local_time }}</p>
+            <p class="pb-2">{{ getDateAndTime(event.time) }}</p>
         <p>{{ event.venue.name }}</p>
         <p>{{ event.venue.address_1 }}</p>
         <p>{{ event.venue.address_2 }}</p>
@@ -23,6 +23,7 @@
 </template>
 
 <script>
+import dateAndTime from '~/mixins/dateAndTime.js';
 import Lightbox from './Lightbox';
 
 export default {
@@ -30,6 +31,7 @@ export default {
   components: {
     Lightbox
   },
+  mixins: [dateAndTime],
   props: {
     event: {
       type: Object,
@@ -43,7 +45,7 @@ export default {
   },
   methods: {
     openLightbox() {
-
+      // TODO
     }
   }
 };

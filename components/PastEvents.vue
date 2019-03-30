@@ -11,7 +11,7 @@
         :key="event.id"
         class="flex items-center list-reset rounded shadow-md m-2">
         <div class="px-4 py-8">
-          <p>{{ convertDate(event.local_date) }}, {{ event.local_time }}</p>
+          <p>{{ getDateAndTime(event.time) }}</p>
           <h3 class="py-4">{{ event.name }}</h3>
           <p>{{ event.yes_rsvp_count }} attendees</p>
         </div>
@@ -21,18 +21,15 @@
 </template>
 
 <script>
+import dateAndTime from '~/mixins/dateAndTime.js';
+
 export default {
   name: 'PastEvents',
+  mixins: [dateAndTime],
   props: {
     events: {
       type: Array,
       default: () => []
-    }
-  },
-  methods: {
-    convertDate(localDate) {
-      let date = new Date(localDate);
-      return date.toDateString().slice(4);
     }
   }
 };
