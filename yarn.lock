@@ -976,6 +976,14 @@
     consola "^1.4.4"
     http-proxy-middleware "^0.19.0"
 
+"@nuxtjs/proxy@^1.3.3":
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/proxy/-/proxy-1.3.3.tgz#3de3d9f073e8e57167168100940be2a824a220e0"
+  integrity sha512-ykpCUdOqPOH79mQG30QfWZmbRD8yjTD+TTSBbwow5GkROUQEtXw+HE+q6i+YFpuChvgJNbwVrXdZ3YmfXbZtTw==
+  dependencies:
+    consola "^2.5.6"
+    http-proxy-middleware "^0.19.1"
+
 "@nuxtjs/youch@^4.2.3":
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/@nuxtjs/youch/-/youch-4.2.3.tgz#36f8b22df5a0efaa81373109851e1d857aca6bed"
@@ -1001,6 +1009,7 @@
     merge-source-map "^1.1.0"
     postcss "^7.0.7"
     postcss-selector-parser "^5.0.0"
+    prettier "1.13.7"
     source-map "^0.7.3"
     vue-template-es2015-compiler "^1.6.0"
 
@@ -2241,6 +2250,11 @@ consola@^2.0.0-1, consola@^2.3.0:
     figures "^2.0.0"
     std-env "^2.2.1"
     string-width "^2.1.1"
+
+consola@^2.5.6:
+  version "2.5.8"
+  resolved "https://registry.yarnpkg.com/consola/-/consola-2.5.8.tgz#26afe2ab7f560d285a88578eaae9d9be18029ba9"
+  integrity sha512-fYv1M0rNJw4h0CZUx8PX02Px7xQhA+vNHpV8DBCGMoozp2Io/vrSXhhEothaRnSt7VMR0rj2pt9KKLXa5amrCw==
 
 console-browserify@^1.1.0:
   version "1.1.0"
@@ -3939,7 +3953,7 @@ http-errors@1.6.3, http-errors@~1.6.2, http-errors@~1.6.3:
     setprototypeof "1.1.0"
     statuses ">= 1.4.0 < 2"
 
-http-proxy-middleware@^0.19.0:
+http-proxy-middleware@^0.19.0, http-proxy-middleware@^0.19.1:
   version "0.19.1"
   resolved "https://registry.yarnpkg.com/http-proxy-middleware/-/http-proxy-middleware-0.19.1.tgz#183c7dc4aa1479150306498c210cdaf96080a43a"
   integrity sha512-yHYTgWMQO8VvwNS22eLLloAkvungsKdKTLO8AJlftYIKNfJr3GK3zK0ZCfzDDGUBttdGc8xFy1mCitvNKQtC3Q==
@@ -6392,6 +6406,11 @@ prepend-http@^1.0.1:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-1.0.4.tgz#d4f4562b0ce3696e41ac52d0e002e57a635dc6dc"
   integrity sha1-1PRWKwzjaW5BrFLQ4ALlemNdxtw=
+
+prettier@1.13.7:
+  version "1.13.7"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.13.7.tgz#850f3b8af784a49a6ea2d2eaa7ed1428a34b7281"
+  integrity sha512-KIU72UmYPGk4MujZGYMFwinB7lOf2LsDNGSOC8ufevsrPLISrZbNJlWstRi3m0AMuszbH+EFSQ/r6w56RSPK6w==
 
 pretty-bytes@^5.1.0:
   version "5.1.0"

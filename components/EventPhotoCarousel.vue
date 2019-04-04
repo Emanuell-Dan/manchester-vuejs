@@ -16,11 +16,18 @@ import {mapState} from 'vuex';
 
 export default {
 	name: 'EventPhotoCarousel',
-	computed: {
-    ...mapState(['meetup'])
+	props: {
+		eventId: {
+			type: String,
+			default: ''
+		}
 	},
-	mounted() {
-    console.log('carousel', this.meetup.eventAlbum);
-  }
+  computed: {
+    ...mapState(['eventAlbum'])
+	},
+	created() {
+		// TODO get state from store
+		console.log(this.eventAlbum);
+	}
 }
 </script>

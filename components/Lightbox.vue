@@ -8,7 +8,7 @@
         </div>
         <div>
           <h3>Photos</h3>
-          <event-photo-carousel />
+          <event-photo-carousel :event-id="event.id" />
         </div>
         <div>
           <h3>Slides</h3>

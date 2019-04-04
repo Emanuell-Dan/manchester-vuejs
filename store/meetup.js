@@ -1,6 +1,7 @@
 import Axios from 'axios';
 
 const url = 'https://api.meetup.com/2';
+const urlNew = '/api';
 const group = 'VueJS-Manchester';
 const isSigned = 'true';
 const photoHost = 'public';
@@ -23,6 +24,7 @@ export const mutations = {
 	},
 	storeEventAlbum(state, data) {
 		state.eventAlbum.push(...data);
+		console.log(state.eventAlbum);
 	}
 };
 
@@ -35,8 +37,8 @@ export const actions = {
 		const response = await Axios.get(url + '/events?&sign=' +	isSigned + '&photo-host=' +	photoHost + '&group_urlname=CoinFestUK');
 		store.commit('storeFutureEvents', response.data.results);
 	},
-	async getEventAlbum(store) {
-		const response = await Axios.get(url + '/photos?&sign=' +	isSigned + '&photo-host=' +	photoHost + '&event_id=246262469');
+	async getEventAlbum(store, eventID) {
+		const response = await Axios.get(urlNew + '/photos?&sign=' +	isSigned + '&photo-host=' +	photoHost + '&event_id=' + eventID);
 		store.commit('storeEventAlbum', response.data.results);
 	}
 };

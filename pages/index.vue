@@ -39,9 +39,6 @@ export default {
   computed: {
     ...mapState(['meetup'])
   },
-  mounted() {
-    console.log(this.meetup.pastEvents[2]);
-  },
   methods: {
     scrollToSection(section) {
       const sectionId = section.toLowerCase().split(' ').join('-');
