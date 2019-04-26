@@ -20,7 +20,7 @@
         </div>
       </div>
       <img 
-        :src="getHighResolutionImage(event.photo_url)"
+        :src="event.photo_url ? getHighResolutionImage(event.photo_url) : '_nuxt/static/manchester-banner.png'"
         :alt="event.name"
         class="flex-1 w-1/2">
     </div>

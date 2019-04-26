@@ -27,6 +27,7 @@ export const mutations = {
 		state.futureEvents.push(...data);
 	},
 	storeEventAlbum(state, data) {
+		state.eventAlbum = [];
 		state.eventAlbum.push(...data);
 		console.log(state.eventAlbum);
 	}
