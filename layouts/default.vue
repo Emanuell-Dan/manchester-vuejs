@@ -33,7 +33,7 @@ body,
 	margin: 0;
 }
 
-.text-vue-brand {
-	color: #42b883;
+ul {
+  padding: 0;
 }
 </style>

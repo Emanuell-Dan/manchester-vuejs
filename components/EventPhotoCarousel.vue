@@ -1,13 +1,13 @@
 <template>
   <ul>
-    <li>Test</li>
-    <!-- <li 
-      v-for="photo in album"
-      :key="photo.id">
+    <li 
+      v-for="photo in eventAlbum"
+      :key="photo.id"
+      class="list-reset">
       <img 
         :src="photo.thumb_link"
         :alt="photo.member.name">
-    </li> -->
+    </li>
   </ul>
 </template>
 
@@ -23,11 +23,7 @@ export default {
 		}
 	},
   computed: {
-    ...mapState(['eventAlbum'])
-	},
-	created() {
-		// TODO get state from store
-		console.log(this.eventAlbum);
+    ...mapState('meetup', ['eventAlbum'])
 	}
 }
 </script>
