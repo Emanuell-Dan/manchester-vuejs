@@ -2,7 +2,7 @@
   <div 
     id="about"
     class="pt-16">
-    <h2 class="about__title text-vue-brand text-center mobile:text-xl text-4xl mb-8">What we're about</h2>
+    <h2 class="about__title text-vue-brand text-center text-4xl mb-8">What we're about</h2>
 			
     <div class="about__content text-base">
       <p class="mb-4">Welcome,</p>
@@ -13,9 +13,9 @@
       <p class="mb-4">Should you have something interesting to talk about, either from a theoretical point of view or a demo to showcase,
       this will be your chance! Get in touch with the organiser for more details.</p>
 
-      <div class="tablet:flex tablet:justify-between">
+      <div class="md:flex md:justify-between">
         <p class="mb-4">Thanks and I hope you will all be joining us,<br>Emanuell &amp; the MoneySuperMarket team</p>
-        <div class="mobile:pt-2 about__social flex items-center">
+        <div class="pt-2 md:pt-0 flex items-center">
           <p class="font-bold mr-4">Find us on:</p>
           <ul class="list-reset flex items-center">
             <li class="mr-4">

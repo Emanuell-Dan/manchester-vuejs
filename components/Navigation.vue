@@ -1,7 +1,7 @@
 <template>
   <div class="nav">
     <div 
-      class="nav__mobile tablet:hidden fixed z-20 text-center pin-t pin-r cursor-pointer mt-4 mr-4"
+      class="nav__mobile md:hidden fixed z-20 text-center right-0 cursor-pointer mt-4 mr-4"
       @click="toggleMobileNav">
       <span :class="{ 'nav__mobile-open': isNavOpen }" />
       <span :class="{ 'nav__mobile-open': isNavOpen }" />
@@ -10,12 +10,12 @@
     </div>
     <nav 
       :class="{'nav__desktop--show': isNavOpen}"
-      class="nav__desktop fixed z-10 pin-x pin-t bg-black text-vue-brand font-bold p-4">
-      <ul class="list-reset flex mobile:flex-col items-center tablet:justify-center tablet:flex-wrap mobile:mt-8">
+      class="nav__desktop fixed z-10 bg-black text-vue-brand font-bold w-full">
+      <ul class="list-reset flex flex-col md:flex-row items-center md:justify-center mt-12 md:mt-4 mb-6 md:mb-4">
         <li 
           v-for="(item, index) in navItems"
           :key="index"
-          class="cursor-pointer mobile:my-1 tablet:mx-2"
+          class="cursor-pointer my-1 md:mx-2"
           @click="$emit('scrollToSection', item, isNavOpen = false)">{{ item }}
         </li>
       </ul>
@@ -28,7 +28,7 @@ const NAV_ITEMS = [
   'About',
   'Future events',
   'Past events',
-  'Resources'
+  'News'
 ];
 
 export default {
@@ -53,7 +53,7 @@ export default {
   .nav {
     &__desktop {
       @media (max-width: 767px) {
-        margin-top: -168px;
+        margin-top: -200px;
         transition: all .5s;
 
         &--show {

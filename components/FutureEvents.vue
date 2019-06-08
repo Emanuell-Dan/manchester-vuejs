@@ -2,23 +2,27 @@
   <div 
     id="future-events"
     class="relative pt-16">
-    <h2 class="text-vue-brand text-center mobile:text-xl text-4xl mb-8">Coming next</h2>
+    <h2 class="text-vue-brand text-center text-4xl mb-8">Coming next</h2>
     <div 
       v-if="event"
-      class="flex mobile:flex-col justify-around cursor-pointer rounded shadow-md p-8"
+      class="flex flex-col md:flex-row cursor-pointer rounded shadow-md p-8"
       @click="$emit('open', event)">
-      <div>
-        <h3 class="uppercase pb-4">{{ event.name }}</h3>
+      <div class="flex-grow">
+        <h3 class="text-vue-brand uppercase pb-4">{{ event.name }}</h3>
         <p>{{ event.yes_rsvp_count }} {{ getAttendeesLimit }} going</p> 
       </div>
       <div>
-        <p class="pb-2">{{ getDateAndTime(event.time) }}</p>
+        <p class="font-bold pb-2">{{ getDateAndTime(event.time) }}</p>
         <p>{{ event.venue.name }}</p>
         <p>{{ event.venue.address_1 }}</p>
         <p>{{ event.venue.address_2 }}</p>
       </div>
     </div>
-    <h3 v-else>Watch this space...</h3>
+    <h3 
+      v-else
+      class="text-center">
+      Watch this space...
+    </h3>
   </div>
 </template>
 

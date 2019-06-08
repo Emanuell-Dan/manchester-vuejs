@@ -4,7 +4,7 @@
     <banner />
 
     <div class="bg-white text-black">
-      <div class="container relative mx-auto mobile:px-4 tablet:px-12">
+      <div class="container relative mx-auto px-4 sm:px-12 lg:px-16">
         <about />
         <future-events 
           :event="meetup.futureEvents[0]" 
@@ -12,7 +12,7 @@
         <past-events 
           :events="meetup.pastEvents"
           @open="openLightbox" />
-        <resources />
+        <news />
         <lightbox
           v-if="hasLightbox"
           :event="event"
@@ -36,7 +36,7 @@ import Banner from '~/components/Banner';
 import About from '~/components/About';
 import FutureEvents from '~/components/FutureEvents';
 import PastEvents from '~/components/PastEvents';
-import Resources from '~/components/Resources';
+import News from '~/components/News';
 import Lightbox from '~/components/Lightbox';
 
 export default {
@@ -46,7 +46,7 @@ export default {
 		About,
 		FutureEvents,
 		PastEvents,
-    Resources,
+    News,
     Lightbox
   },
   data() {
@@ -56,7 +56,10 @@ export default {
     }
   },
   computed: {
-    ...mapState(['meetup'])
+    ...mapState(['meetup', 'twitter'])
+  },
+  mounted() {
+    console.log(this.meetup.pastEvents);
   },
   methods: {
     openLightbox(event) {
