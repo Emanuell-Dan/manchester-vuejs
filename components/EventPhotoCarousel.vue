@@ -1,5 +1,5 @@
 <template>
-  <ul>
+  <!-- <ul class="flex">
     <li 
       v-for="photo in eventAlbum"
       :key="photo.id"
@@ -8,7 +8,21 @@
         :src="photo.thumb_link"
         :alt="photo.member.name">
     </li>
-  </ul>
+  </ul> -->
+  <carousel 
+    :per-page="3"
+    :autoplay="true"
+    :loop="true"
+    :pagination-enabled="false" 
+    :navigation-enabled="true">
+    <slide 
+      v-for="photo in eventAlbum"
+      :key="photo.id">
+      <img 
+        :src="photo.thumb_link"
+        :alt="photo.member.name">
+    </slide>
+  </carousel>
 </template>
 
 <script>
