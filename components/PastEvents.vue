@@ -2,7 +2,7 @@
   <div 
     id="past-events"
     class="relative pt-16">
-    <h2 class="text-vue-brand text-center text-4xl mb-8">Past events</h2>
+    <h2 class="text-vue-brand font-bold text-center text-4xl mb-8">Past events</h2>
     <ul 
       v-if="events.length"
       class="flex justify-between flex-wrap">
