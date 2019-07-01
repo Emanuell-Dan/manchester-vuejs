@@ -11,7 +11,7 @@ install:
 - npm install
 - npm run generate
 script:
-- echo "Skipping tests"
+- echo $GITHUB_ACCESS_TOKEN
 deploy:
   provider: pages
   skip-cleanup: true
