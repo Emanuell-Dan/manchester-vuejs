@@ -11,12 +11,11 @@ install:
 - npm install
 - npm run generate
 script:
-- echo $GITHUB_ACCESS_TOKEN
+- echo "Skipping tests"
 deploy:
   provider: pages
   skip-cleanup: true
-  github-token:
-    secure: Wu+JaafZGk/racE/cUGWQWonMZFJWWmedpVissjdhlMhsdTzTvAVIkMw1LeBXYdwJ241zQjW31Ld/5ZvAy8jqghJJ4TK6CwnmOeHvI8QkWACf7mwjQz4uWN5CTAiwbaQHuhCCp+hrrmkBhraWt38VH40OkpHBNZaYi5kifW364esLtaNzywx1G0vvZ1DHBeFYrdOnkExCDiI9htvZl4TtiKfZ6Kl9uuzieLqTx5l6Jek21cCkL2Aeyy60ZVHc9piNM734wJ5Ft4Bz5RoRLYvY7m2ujY/IP264HQA//pLWWh6Rr7Z3Vf698EPLu/XPoLTscv6kfPsgo78/ZXpljMFTlJ7/YCHt/pad3zjEL52jq7z2ybMURsCHB8Ku6S9OW3af1CwrA/VaVZIrKXTK4TZPkA4aiQeARQftYr68me/hitfxL5ruGFNqgYVchZSJKlz7tsiGivgb5anzZdI31GgNMGtZFtVekBcsyIDYMddvGc326/b8yi96C0I72WQ/L02a3iweZtn4MLfLk8gu+jS/x4BTcs7/s0uvldSod6xDj7YuTVjck34zoAxwGWCqyye7drZMevLHPqrOripFVsytZZE2QuQyXr79BdYeHknLE1d1wrGR9N5h7hbbrpSmnY+YoIRfbJGqQSNpcm47ByJRGX0dQKoMrber/I75l2u+JQ=
+  github-token: $GITHUB_TOKEN_ACCESS
   target-branch: gh-pages
   local-dir: dist
   on:
