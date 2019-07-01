@@ -9,8 +9,7 @@
       <li 
         v-for="event in events"
         :key="event.id"
-        class="flex items-center list-reset cursor-pointer rounded shadow-md m-2"
-        @click="$emit('open', event)">
+        class="flex items-center list-reset cursor-pointer rounded shadow-md m-2">
         <div class="px-4 py-8">
           <p class="font-bold">{{ getDateAndTime(event.time) }}</p>
           <h3 class="text-vue-brand py-4">{{ event.name }}</h3>

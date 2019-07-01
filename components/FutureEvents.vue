@@ -5,8 +5,7 @@
     <h2 class="text-vue-brand font-bold text-center text-4xl mb-8">Coming next</h2>
     <div 
       v-if="event"
-      class="flex flex-col md:flex-row cursor-pointer rounded shadow-md p-8"
-      @click="$emit('open', event)">
+      class="flex flex-col md:flex-row cursor-pointer rounded shadow-md p-8">
       <div class="flex-grow">
         <h3 class="text-vue-brand uppercase pb-4">{{ event.name }}</h3>
         <p>{{ event.yes_rsvp_count }} {{ getAttendeesLimit }} going</p> 
