@@ -13,11 +13,8 @@ const {isSigned, photoHost, status} = requestParams;
 
 export const state = () => ({
 	pastEvents: [],
-	futureEvents: [],
-	eventAlbum: []
+	futureEvents: []
 });
-
-export const getters = {}
 
 export const mutations = {
 	storePastEvents(state, data) {
@@ -26,11 +23,6 @@ export const mutations = {
 	},
 	storeFutureEvents(state, data) {
 		state.futureEvents.push(...data);
-	},
-	storeEventAlbum(state, data) {
-		state.eventAlbum = [];
-		state.eventAlbum.push(...data);
-		console.log(state.eventAlbum);
 	}
 };
 
@@ -43,10 +35,5 @@ export const actions = {
 		requestParams = {...requestParams, group: 'McrFRED'}
 		response = await Axios.get(url + '/events?&sign=' +	isSigned + '&photo-host=' +	photoHost + '&group_urlname=' + requestParams.group);
 		store.commit('storeFutureEvents', response.data.results);
-	},
-	async getEventAlbum(store, eventID) {
-		requestParams = {...requestParams, url: '/api'}
-		response = await Axios.get(requestParams.url + '/photos?&sign=' +	isSigned + '&photo-host=' +	photoHost + '&event_id=' + eventID);
-		store.commit('storeEventAlbum', response.data.results);
 	}
 };

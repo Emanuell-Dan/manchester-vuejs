@@ -15,7 +15,7 @@
         <li 
           v-for="(item, index) in navItems"
           :key="index"
-          class="cursor-pointer my-1 md:mx-2"
+          class="cursor-pointer hover:text-white focus:text-white my-1 md:mx-2"
           @click="$emit('scrollToSection', item, isNavOpen = false)">{{ item }}
         </li>
       </ul>

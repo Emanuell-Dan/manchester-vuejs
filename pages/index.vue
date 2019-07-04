@@ -8,7 +8,7 @@
         <about />
         <future-events :event="meetup.futureEvents[0]" />
         <past-events :events="meetup.pastEvents" />
-        <news />
+        <news :tweets="twitter.timeline" />
         <span 
           class="scroll-top absolute bg-vue-brand shadow-md rounded text-center pin-b lg:pin-r cursor-pointer mb-4 lg:mb-12 lg:mr-20"
           @click="$el.scrollIntoView({ behavior: 'smooth' })" />
@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import {mapState, mapActions} from 'vuex';
+import {mapState} from 'vuex';
 import Navigation from '~/components/Navigation';
 import Banner from '~/components/Banner';
 import About from '~/components/About';
@@ -35,16 +35,8 @@ export default {
 		PastEvents,
     News
   },
-  data() {
-    return {
-      event: {}
-    }
-  },
   computed: {
     ...mapState(['meetup', 'twitter'])
-  },
-  mounted() {
-    console.log(this.meetup.pastEvents);
   },
   methods: {
     scrollToSection(section) {
