@@ -80,10 +80,5 @@ dist
 # IDE
 .idea
 
-# Root
-tailwind.js
-postcss.config.js
-nuxt.config.js
-
 # Others
 .DS_Store
