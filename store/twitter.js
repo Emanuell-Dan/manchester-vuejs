@@ -1,10 +1,10 @@
 import Twit from 'twit';
 
 const T = new Twit({
-  consumer_key:         process.env.NODE_ENV !== 'production' ? process.env.LOCAL_CONSUMER_KEY : process.env.CONSUMER_KEY,
-  consumer_secret:      process.env.NODE_ENV !== 'production' ? process.env.LOCAL_CONSUMER_SECRET : process.env.CONSUMER_KEY_SECRET,
-  access_token:         process.env.NODE_ENV !== 'production' ? process.env.LOCAL_ACCESS_TOKEN : process.env.ACCESS_TOKEN_SECRET,
-	access_token_secret:  process.env.NODE_ENV !== 'production' ? process.env.LOCAL_ACCESS_TOKEN_SECRET : process.env.ACCESS_TOKEN_SECRET,
+  consumer_key:         process.env.consumerKey,
+  consumer_secret:      process.env.consumerSecret,
+  access_token:         process.env.accessToken,
+	access_token_secret:  process.env.accessTokenSecret,
 	timeout_ms:           60 * 1000
 });
 

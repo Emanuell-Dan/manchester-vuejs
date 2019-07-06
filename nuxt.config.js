@@ -4,6 +4,16 @@ module.exports = {
   mode: 'universal',
 
   /*
+  ** Environment variables
+  */
+ env: {
+  consumerKey:         process.env.NODE_ENV !== 'production' ? process.env.LOCAL_CONSUMER_KEY : process.env.CONSUMER_KEY,
+  consumerSecret:      process.env.NODE_ENV !== 'production' ? process.env.LOCAL_CONSUMER_SECRET : process.env.CONSUMER_KEY_SECRET,
+  accessToken:         process.env.NODE_ENV !== 'production' ? process.env.LOCAL_ACCESS_TOKEN : process.env.ACCESS_TOKEN_SECRET,
+	accessTokenSecret:   process.env.NODE_ENV !== 'production' ? process.env.LOCAL_ACCESS_TOKEN_SECRET : process.env.ACCESS_TOKEN_SECRET
+ },
+
+  /*
   ** Headers of the page
   */
   head: {
