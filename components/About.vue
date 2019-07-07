@@ -2,7 +2,7 @@
   <div 
     id="about"
     class="pt-16">
-    <h2 class="about__title text-vue-brand font-bold text-center text-4xl mb-8">What we're about</h2>
+    <h2 class="about__title text-vue-brand font-bold text-center text-2xl md:text-4xl mb-4 md:mb-8">What we're about</h2>
 			
     <div class="about__content text-base">
       <p class="mb-4">Welcome,</p>

@@ -9,10 +9,10 @@
         <future-events :event="meetup.futureEvents[0]" />
         <past-events :events="meetup.pastEvents" />
       </div>
-      <div class="relative bg-twitter">
+      <div class="relative bg-twitter pb-4 md:pb-0">
         <news :tweets="twitter.timeline" />
         <span 
-          class="scroll-top absolute bg-vue-brand shadow-md rounded text-center bottom-0 cursor-pointer mb-16 lg:mr-20"
+          class="scroll-top absolute bg-vue-brand shadow-md rounded text-center bottom-0 cursor-pointer mb-4 md:mb-16 lg:mr-20"
           @click="$el.scrollIntoView({ behavior: 'smooth' })" />
       </div>
     </div>

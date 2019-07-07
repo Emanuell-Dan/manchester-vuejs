@@ -1,11 +1,11 @@
 <template>
   <div
     id="news" 
-    class="py-16 -mt-2">
-    <h2 class="text-vue-brand font-bold text-center mobile:text-xl text-4xl mb-8">Latest news</h2>
+    class="py-16 md:-mt-2">
+    <h2 class="text-vue-brand font-bold text-center text-2xl md:text-4xl mb-4 md:mb-8">Latest news</h2>
 
-    <section class="flex justify-center tweet-grid">
-      <ul class="flex flex-col mx-4 mt-16 tweet-grid--left">
+    <section class="flex flex-col md:flex-row justify-center tweet-grid">
+      <ul class="flex flex-col items-center mx-2 lg:mx-4 md:mt-16 tweet-grid--left">
         <li 
           v-for="(tweet, index) in tweets.slice(0, 3)"
           :key="index"
@@ -40,7 +40,7 @@
         </li>
       </ul>
 
-      <ul class="flex flex-col mx-4 tweet-grid--center">
+      <ul class="flex flex-col items-center mx-2 lg:mx-4 tweet-grid--center">
         <li 
           v-for="(tweet, index) in tweets.slice(3, 6)"
           :key="index"
@@ -75,7 +75,7 @@
         </li>
       </ul>
 
-      <ul class="flex flex-col mx-4 mt-32 tweet-grid--right">
+      <ul class="flex flex-col items-center mx-2 lg:mx-4 md:mt-32 tweet-grid--right">
         <li 
           v-for="(tweet, index) in tweets.slice(6, 9)"
           :key="index"

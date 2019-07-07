@@ -2,7 +2,7 @@
   <div 
     id="past-events"
     class="relative pt-16">
-    <h2 class="text-vue-brand font-bold text-center text-4xl mb-8">Past events</h2>
+    <h2 class="text-vue-brand font-bold text-center text-2xl md:text-4xl mb-4 md:mb-8">Past events</h2>
     <ul 
       v-if="events.length"
       class="flex justify-between flex-wrap">
@@ -41,10 +41,6 @@ li {
   
   @media (min-width: 768px) {
     flex-basis: 47%;
-  }
-
-  @media (min-width: 992px) {
-    flex-basis: 48%;
   }
 }
 </style>
