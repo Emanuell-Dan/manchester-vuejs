@@ -20,6 +20,6 @@ export const mutations = {
 
 export const actions = {
 	async getTimeline(store) {
-		T.get('statuses/user_timeline', { screen_name: 'vuejsmcr', count: 2 }).then(result =>	store.commit('buildTimeline', result.data));
+		T.get('statuses/user_timeline', { screen_name: 'vuejsmcr', count: 9 }).then(result =>	store.commit('buildTimeline', result.data));
 	}
 };

@@ -37,7 +37,9 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    '~/assets/css/tailwind.css'
+    '~/assets/css/tailwind.css',
+    '~/assets/css/components/scroll-top.scss',
+    '~/assets/css/components/tweet-card.scss'
   ],
 
   /*

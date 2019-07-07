@@ -1,0 +1,19 @@
+.scroll-top {
+  left: 50%;
+  transform: translateX(-50%);
+
+	&::before {
+		background: url('../../../static/circle-up.svg') center no-repeat;
+    border-radius: 0.25rem;
+    display: block;
+    content: "";
+    height: 32px;
+    padding: 1.5rem;
+    width: 32px;
+	}
+
+  &:focus::before,
+  &:hover::before {
+    background-color: rgba(0,0,0,.35);
+  }
+}

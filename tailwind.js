@@ -127,6 +127,7 @@ module.exports = {
       },
       // custom
       'vue-brand': '#42b883',
+      'twitter': '#10171e',
     },
     spacing: {
       px: '1px',

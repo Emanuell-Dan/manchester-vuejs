@@ -1,0 +1,43 @@
+.tweet-card {
+	&__retweeted {
+		&::before {
+			background: url('../../../static/retweet.svg') center no-repeat;
+			display: block;
+			content: "";
+			height: 20px;
+			left: 0;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 20px;
+		}
+	}
+
+	&__count {
+		&::before {
+			background: url('../../../static/retweet.svg') center no-repeat;
+			display: block;
+			content: "";
+			height: 20px;
+			left: 0;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 20px;
+		}
+	}
+
+	&__likes {
+		&::before {
+			background: url('../../../static/retweet.svg') center no-repeat;
+			display: block;
+			content: "";
+			height: 20px;
+			left: 0;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 20px;
+		}
+	}
+}
