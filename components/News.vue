@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import TweetCard from '~/components/Tweetcard';
+import TweetCard from '~/components/TweetCard';
 
 export default {
   name: 'News',
