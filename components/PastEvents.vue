@@ -10,10 +10,10 @@
         v-for="event in events"
         :key="event.id"
         class="past-events__item bg-white flex items-center cursor-pointer rounded-lg m-2">
-        <div class="px-4 py-8">
-          <p class="text-meetup-date font-medium">{{ getDateAndTime(event.time) }}</p>
-          <h3 class="font-bold py-4">{{ event.name }}</h3>
-          <p>{{ event.yes_rsvp_count }} attendees</p>
+        <div class="past-events__event-info px-4 py-8">
+          <p class="past-events__event-date font-medium">{{ getDateAndTime(event.time) }}</p>
+          <h3 class="past-events__event-name font-bold py-4">{{ event.name }}</h3>
+          <p class="past-events__event-attendees">{{ event.yes_rsvp_count }} attendees</p>
         </div>
       </li>
     </ul>
