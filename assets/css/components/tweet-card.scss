@@ -1,4 +1,12 @@
 .tweet-card {
+	&__item {
+		&:hover,
+		&:focus {
+			box-shadow: $twitter-card;
+			transform: translateY(-1px);
+		}
+	}
+
 	&__retweeted,
 	&__count,
 	&__likes  {

@@ -24,7 +24,7 @@
     </div>
     <h3 
       v-else
-      class="future-events__tba text-center">
+      class="future-events__tba text-center font-bold">
       Watch this space...
     </h3>
   </div>
