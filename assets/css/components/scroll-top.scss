@@ -1,10 +1,10 @@
 .scroll-top {
-  background-color: #42b883;
+  background-color: $vue-brand;
   left: 50%;
   transform: translateX(-50%);
 
 	&::before {
-		background: url('../../../static/circle-up.svg') center no-repeat;
+		background: url('~static/circle-up.svg') center no-repeat;
     border-radius: 0.25rem;
     display: block;
     content: "";
@@ -15,6 +15,6 @@
 
   &:focus::before,
   &:hover::before {
-    background-color: rgba(0,0,0,.35);
+    background-color: rgba(0, 0, 0, 0.35);
   }
 }

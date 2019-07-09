@@ -38,10 +38,15 @@ module.exports = {
   */
   css: [
     '~/assets/css/tailwind.css',
-    '~/assets/css/settings.scss',
     '~/assets/css/components/components.scss',
     '~/assets/css/pages/index.scss'
   ],
+
+  styleResources: {
+    scss: [
+      '~/assets/css/settings.scss'
+    ]
+  },
 
   /*
   ** Plugins to load before mounting the App
@@ -53,6 +58,7 @@ module.exports = {
   */
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
+    '@nuxtjs/style-resources',
     '@nuxtjs/axios',
     '@nuxtjs/proxy'
   ],

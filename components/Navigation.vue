@@ -3,10 +3,18 @@
     <div 
       class="nav__mobile md:hidden fixed z-20 text-center right-0 cursor-pointer mt-4 mr-4"
       @click="toggleMobileNav">
-      <span :class="{ 'nav__mobile-open': isNavOpen }" />
-      <span :class="{ 'nav__mobile-open': isNavOpen }" />
-      <span :class="{ 'nav__mobile-open': isNavOpen }" />
-      <span :class="{ 'nav__mobile-open': isNavOpen }" />
+      <span
+        :class="{ 'nav__mobile-burger--open': isNavOpen }"
+        class="nav__mobile-burger"/>
+      <span
+        :class="{ 'nav__mobile-burger--open': isNavOpen }"
+        class="nav__mobile-burger"/>
+      <span
+        :class="{ 'nav__mobile-burger--open': isNavOpen }"
+        class="nav__mobile-burger"/>
+      <span
+        :class="{ 'nav__mobile-burger--open': isNavOpen }"
+        class="nav__mobile-burger"/>
     </div>
     <nav 
       :class="{'nav__desktop--show': isNavOpen}"
