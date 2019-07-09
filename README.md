@@ -35,9 +35,9 @@ We adhere to a label system to differentiate the type of work involved in comple
 
 ## Contributions
 
-Contributions to this **documentation file** are welcomed and encouraged.
+Contributions to this **documentation file** are welcomed and encouraged. Multiple people may collaborate towards the completion of one task.
 
-When picking a new card to work on, ensure you are **basing off master**. From there, depending on the task, create a new branch as follows:
+When picking a new card to work on, make sure you assign yourself to it. Before creating a new branch double check you are **basing it off master**. From there, depending on the task, create a new branch as follows:
 
   * **Feature branch**: `git checkout -b feature/card-name`
   * **Bugfix branch**: `git checkout -b bugfix/card-name`
