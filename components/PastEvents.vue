@@ -9,12 +9,17 @@
       <li 
         v-for="event in events"
         :key="event.id"
-        class="past-events__item bg-white flex items-center cursor-pointer rounded-lg m-2">
-        <div class="past-events__event-info px-4 py-8">
-          <p class="past-events__event-date font-medium">{{ getDateAndTime(event.time) }}</p>
-          <h3 class="past-events__event-name font-bold py-4">{{ event.name }}</h3>
-          <p class="past-events__event-attendees">{{ event.yes_rsvp_count }} attendees</p>
-        </div>
+        class="past-events__item">
+        <a 
+          :href="event.event_url"
+          target="_blank"
+          class="past-events__url bg-white flex items-center rounded-lg m-2">
+          <div class="past-events__event-info px-4 py-8">
+            <p class="past-events__event-date font-medium">{{ getDateAndTime(event.time) }}</p>
+            <h3 class="past-events__event-name font-bold py-4">{{ event.name }}</h3>
+            <p class="past-events__event-attendees">{{ event.yes_rsvp_count }} attendees</p>
+          </div>
+        </a>
       </li>
     </ul>
   </div>
