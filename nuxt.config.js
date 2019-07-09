@@ -38,8 +38,9 @@ module.exports = {
   */
   css: [
     '~/assets/css/tailwind.css',
-    '~/assets/css/components/scroll-top.scss',
-    '~/assets/css/components/tweet-card.scss'
+    '~/assets/css/settings.scss',
+    '~/assets/css/components/components.scss',
+    '~/assets/css/pages/index.scss'
   ],
 
   /*

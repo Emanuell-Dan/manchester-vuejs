@@ -3,16 +3,16 @@
     <navigation @scrollToSection="scrollToSection" />
     <banner />
 
-    <div class="bg-white text-black">
-      <div class="container mx-auto px-4 sm:px-12 lg:px-16">
+    <div class="landing__content text-black">
+      <div class="landing__inner container mx-auto px-4 sm:px-12 lg:px-16">
         <about />
         <future-events :event="meetup.futureEvents[0]" />
         <past-events :events="meetup.pastEvents" />
       </div>
-      <div class="relative bg-twitter pb-4 md:pb-0">
+      <div class="landing__footer relative pb-4 md:pb-0">
         <news :tweets="twitter.timeline" />
         <span 
-          class="scroll-top absolute bg-vue-brand shadow-md rounded text-center bottom-0 cursor-pointer mb-4 md:mb-16 lg:mr-20"
+          class="scroll-top absolute shadow-md rounded text-center bottom-0 cursor-pointer mb-4 md:mb-16 lg:mr-20"
           @click="$el.scrollIntoView({ behavior: 'smooth' })" />
       </div>
     </div>

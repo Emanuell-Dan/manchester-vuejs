@@ -1,18 +1,18 @@
 <template>
   <div 
     id="past-events"
-    class="relative pt-16">
-    <h2 class="text-vue-brand font-bold text-center text-2xl md:text-4xl mb-4 md:mb-8">Past events</h2>
+    class="past-events relative pt-16">
+    <h2 class="past-events__heading font-bold text-center text-2xl md:text-4xl mb-4 md:mb-8">Past events</h2>
     <ul 
       v-if="events.length"
-      class="flex justify-between flex-wrap">
+      class="past-events__list flex justify-center flex-wrap">
       <li 
         v-for="event in events"
         :key="event.id"
-        class="flex items-center cursor-pointer rounded shadow-md m-2">
+        class="past-events__item bg-white flex items-center cursor-pointer rounded-lg m-2">
         <div class="px-4 py-8">
-          <p class="font-bold">{{ getDateAndTime(event.time) }}</p>
-          <h3 class="text-vue-brand py-4">{{ event.name }}</h3>
+          <p class="text-meetup-date font-medium">{{ getDateAndTime(event.time) }}</p>
+          <h3 class="font-bold py-4">{{ event.name }}</h3>
           <p>{{ event.yes_rsvp_count }} attendees</p>
         </div>
       </li>
@@ -34,13 +34,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss" scoped>
-li {
-  flex-basis: 100%;
-  
-  @media (min-width: 768px) {
-    flex-basis: 47%;
-  }
-}
-</style>

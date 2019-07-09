@@ -1,0 +1,64 @@
+.nav {
+	$p: &;
+
+	&__desktop {
+		color: #42b883;
+		
+		@media (max-width: 767px) {
+			margin-top: -200px;
+			transition: all .5s;
+
+			&--show {
+				margin-top: 0;
+			}
+		}
+	}
+
+	&__mobile {
+		width: 30px;
+		transform: rotate(0deg);
+		transition: .5s ease-in-out;
+
+		span {
+			position: absolute;
+			height: 5px;
+			width: 30px;
+			background: #42b883;
+			border-radius: 9px;
+			opacity: 1;
+			right: 0;
+			transform: rotate(0deg);
+			transition: .25s ease-in-out;
+
+			&:first-child {
+				top: 0;
+			}
+
+			&:nth-child(2),
+			&:nth-child(3) {
+				top: 10px;
+			}
+
+			&:last-child {
+				top: 20px;
+			}
+
+			&.nav__mobile-open {
+				&:first-child,
+				&:last-child {
+					top: 10px;
+					width: 0%;
+					right: 40%;
+				}
+
+				&:nth-child(2) {
+					transform: rotate(45deg);
+				}
+
+				&:nth-child(3) {
+					transform: rotate(-45deg);
+				}
+			}
+		}
+	}
+}

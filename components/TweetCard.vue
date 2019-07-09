@@ -1,42 +1,42 @@
 <template>
   <ul 
     :class="[
-      `tweet-grid--${gridPosition}`,
+      `tweet-card--${gridPosition}`,
       {
         'md:mt-16': gridPosition === 'left',
         'md:mt-32': gridPosition === 'right'
       }
     ]"
-    class="flex flex-col items-center mx-2 lg:mx-4">
+    class="tweet-card__list flex flex-col items-center mx-2 lg:mx-4">
     <li 
       v-for="(tweet, index) in tweets"
       :key="index"
-      class="bg-white max-w-md rounded my-2">
+      class="tweet-card__item bg-white max-w-md rounded my-2">
       <a 
         :href="`https://twitter.com/${getUserScreenName(index)}/status/${getUserId(index)}`"
         target="_blank"
         class="block py-4 px-6">
         <p 
           v-if="tweet.retweeted_status"
-          class="relative pl-6 mb-2 tweet-card__retweeted">
+          class="tweet-card__retweeted relative pl-6 mb-2">
           Retweeted
         </p>
-        <div class="flex items-center mb-2 tweet-card__header">
+        <div class="tweet-card__header flex items-center mb-2">
           <img 
             :src="getProfileImage(index)" 
             alt=""
-            class="rounded tweet-card__profile-logo">
-          <p class="pl-2 tweet-card__profile-name">{{ getUserName(index) }}</p>
+            class="tweet-card__profile-logo rounded">
+          <p class="tweet-card__profile-name pl-2">{{ getUserName(index) }}</p>
         </div>
 
-        <div class="mb-2 tweet-card__content">
+        <div class="tweet-card__content mb-2">
           <p class="tweet-card__text">{{ getTweetMessage(index) }}</p>
         </div>
 
-        <div class="flex tweet-card__footer">
-          <p class="relative pl-6 tweet-card__count">{{ getRetweetsCount(index) }}</p>
-          <span class="px-2 tweet-card__divider">|</span>
-          <p class="relative pl-6 tweet-card__likes">{{ getLikesCount(index) }}</p>
+        <div class="tweet-card__footer flex">
+          <p class="tweet-card__count relative pl-6">{{ getRetweetsCount(index) }}</p>
+          <span class="tweet-card__divider px-2">|</span>
+          <p class="tweet-card__likes relative pl-6">{{ getLikesCount(index) }}</p>
         </div>
       </a>
     </li>
