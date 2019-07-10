@@ -13,27 +13,41 @@
 		&::before {
 			display: block;
 			content: "";
+			height: 24px;
 			left: 0;
 			position: absolute;
 			top: 50%;
 			transform: translateY(-50%);
+			width: 24px;
 		}
 	}
 
 	&__retweeted,
 	&__count {
 		&::before {
-			background: url('~static/retweet.svg') center no-repeat;
-			height: 20px;
-			width: 20px;
+			background: url('~static/retweet-logo.svg') center no-repeat;
+		}
+	}
+
+	&__count {
+		color: $twitter-retweet;
+
+		&::after {
+			border: 0.5px solid $black;
+			content: "";
+			display: block;
+			position: absolute;
+			height: 24px;
+			right: 0;
+			top: 0;
 		}
 	}
 
 	&__likes {
+		color: $twitter-like;
+
 		&::before {
-			background: url('~static/retweet.svg') center no-repeat;
-			height: 20px;
-			width: 20px;
+			background: url('~static/heart-logo.svg') center no-repeat;
 		}
 	}
 }

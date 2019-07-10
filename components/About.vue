@@ -21,22 +21,14 @@
             <li class="about__social-item mr-4">
               <a
                 href="https://www.meetup.com/VueJS-Manchester/"
-                target="_blank">
-                <img
-                  class="cursor-pointer"
-                  src="@/static/meetup.png" 
-                  alt="Meetup logo">
-              </a>
+                target="_blank"
+                class="about__social-item--meetup cursor-pointer"/>
             </li>
-            <li class="about__social-item">
+            <li class="about__social-item about__social-item--twitter">
               <a
                 href="https://twitter.com/vuejsmcr"
-                target="_blank">
-                <img 
-                  class="cursor-pointer"
-                  src="@/static/twitter.png" 
-                  alt="Twitter logo">
-              </a>
+                target="_blank"
+                class="about__social-item--twitter cursor-pointer"/>
             </li>
           </ul>
         </div>

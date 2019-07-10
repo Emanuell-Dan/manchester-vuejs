@@ -18,7 +18,7 @@
         class="block py-4 px-6">
         <p 
           v-if="tweet.retweeted_status"
-          class="tweet-card__retweeted relative pl-6 mb-2">
+          class="tweet-card__retweeted relative pl-8 mb-2">
           Retweeted
         </p>
         <div class="tweet-card__header flex items-center mb-2">
@@ -34,9 +34,8 @@
         </div>
 
         <div class="tweet-card__footer flex">
-          <p class="tweet-card__count relative pl-6">{{ getRetweetsCount(index) }}</p>
-          <span class="tweet-card__divider px-2">|</span>
-          <p class="tweet-card__likes relative pl-6">{{ getLikesCount(index) }}</p>
+          <p class="tweet-card__count relative pl-8 pr-2 mr-2">{{ getRetweetsCount(index) }}</p>
+          <p class="tweet-card__likes relative pl-8">{{ getLikesCount(index) }}</p>
         </div>
       </a>
     </li>

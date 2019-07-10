@@ -2,4 +2,22 @@
 	&__heading {
 		color: $vue-brand;
 	}
+
+	&__social-item {
+		&--meetup,
+		&--twitter {
+			content: "";
+			display: block;
+			height: 50px;
+			width: 50px;
+		}
+
+		&--meetup {
+			background: url('~static/meetup-logo.svg') center no-repeat;
+		}
+
+		&--twitter {
+			background: url('~static/twitter-logo.svg') center no-repeat;
+		}
+	}
 }
