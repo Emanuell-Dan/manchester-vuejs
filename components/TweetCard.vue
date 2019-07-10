@@ -64,7 +64,7 @@ export default {
 			return this.tweets[index].retweeted_status ? this.tweets[index].retweeted_status.id_str : this.tweets[index].id_str;
 		},
 		getProfileImage(index) {
-			return this.tweets[index].retweeted_status ? this.tweets[index].retweeted_status.user.profile_image_url : this.tweets[index].user.profile_image_url;
+			return this.tweets[index].retweeted_status ? this.tweets[index].retweeted_status.user.profile_image_url_https : this.tweets[index].user.profile_image_url_https;
 		},
 		getUserName(index) {
 			return this.tweets[index].retweeted_status ? this.tweets[index].retweeted_status.user.name : this.tweets[index].user.name;
