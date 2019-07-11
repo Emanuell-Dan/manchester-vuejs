@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Home to curious and/or passionate VueJS developers in and around Manchester, UK",
   "author": "Emanuell-Dan-Minciu",
-  "private": true,
+  "license": "MIT",
+  "homepage": "https://www.vuejsmcr.dev/",
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
