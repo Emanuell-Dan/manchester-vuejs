@@ -22,15 +22,18 @@
 		}
 	}
 
-	&__retweeted,
-	&__count {
+	&__retweeted {
 		&::before {
-			background: url('~static/retweet-logo.svg') center no-repeat;
+			background: url('~static/retweet-logo-default.svg') center no-repeat;
 		}
 	}
 
 	&__count {
 		color: $twitter-retweet;
+
+		&::before {
+			background: url('~static/retweet-logo.svg') center no-repeat;
+		}
 
 		&::after {
 			border: 0.5px solid $black;
