@@ -1,5 +1,7 @@
 .tweet-card {
 	&__item {
+		min-height: 224px;
+		
 		&:hover,
 		&:focus {
 			box-shadow: $twitter-card;

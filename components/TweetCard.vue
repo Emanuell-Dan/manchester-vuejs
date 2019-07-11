@@ -3,7 +3,7 @@
     :class="[
       `tweet-card--${gridPosition}`,
       {
-        'md:mt-24': gridPosition === 'left',
+        'md:mt-16': gridPosition === 'left',
         'md:mt-32': gridPosition === 'right'
       }
     ]"
@@ -11,7 +11,7 @@
     <li 
       v-for="(tweet, index) in tweets"
       :key="index"
-      class="tweet-card__item bg-white max-w-md rounded-lg my-2">
+      class="tweet-card__item bg-white flex items-center max-w-md rounded-lg my-2">
       <a 
         :href="`https://twitter.com/${getUserScreenName(index)}/status/${getUserId(index)}`"
         target="_blank"
