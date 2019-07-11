@@ -1,4 +1,8 @@
 # Manchester Vue.js Community
+![Twitter Follow](https://img.shields.io/twitter/follow/vuejsmcr.svg?style=social)
+
+[![Build Status](https://travis-ci.com/Emanuell-Dan/manchester-vuejs.svg?branch=master)](https://travis-ci.com/Emanuell-Dan/manchester-vuejs)
+![GitHub](https://img.shields.io/github/license/Emanuell-Dan/manchester-vuejs.svg)
 
 > Home to curious and/or passionate Vue.js developers in and around Manchester, UK
 
@@ -7,6 +11,9 @@
 ``` bash
 # install dependencies
 $ yarn install
+
+# Update your current shell with the exported variables in .env
+$ source .env
 
 # serve with hot reload at localhost:3000
 $ yarn run dev
