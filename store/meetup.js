@@ -2,13 +2,10 @@ import Axios from 'axios';
 
 let response = '';
 const requestParams = {
-	url: 'https://api.meetup.com/2',
-	group: 'VueJS-Manchester',
-	isSigned: 'true',
-	photoHost: 'public',
-	status: 'past'
+	url: 'https://api.meetup.com/',
+	group: 'VueJS-Manchester'
 };
-const {url, group, isSigned, photoHost, status} = requestParams;
+const {url, group} = requestParams;
 
 export const state = () => ({
 	pastEvents: [],
@@ -27,11 +24,19 @@ export const mutations = {
 
 export const actions = {
 	async getPastEvents(store) {
-		response = await Axios.get(url +	'/events?&sign=' + isSigned + '&photo-host=' + photoHost + '&group_urlname=' + group + '&status=' +	status);
-		store.commit('storePastEvents', response.data.results);
+		response = await Axios.get(`${url}/${group}/events?status=past`, {
+			headers: {
+				'Content-Type': 'application/jsonp'
+			}
+		});
+		store.commit('storePastEvents', response.data);
 	},
 	async getFutureEvents(store) {
-		response = await Axios.get(url + '/events?&sign=' +	isSigned + '&photo-host=' +	photoHost + '&group_urlname=' + group);
-		store.commit('storeFutureEvents', response.data.results);
+		response = await Axios.get(`${url}/${group}/events`, {
+			headers: {
+				'Content-Type': 'application/jsonp'
+			}
+		});
+		store.commit('storeFutureEvents', response.data);
 	}
 };
