@@ -111,7 +111,12 @@ module.exports = {
               join(__dirname, './layouts/**/*.vue'),
               join(__dirname, './components/**/*.vue')
             ]),
-            whitelist: ['html', 'body']
+            extractors: [
+              {
+                extractor: content => content.match(/[A-z0-9-:\/]+/g) || [],
+                extensions: ['html', 'vue']
+              }
+            ]
           })
         )
       };
