@@ -30,8 +30,10 @@
     "eslint": "^5.16.0",
     "eslint-loader": "^2.0.0",
     "eslint-plugin-vue": "^4.0.0",
+    "glob-all": "^3.1.0",
     "node-sass": "^4.11.0",
     "nodemon": "^1.19.1",
+    "purgecss-webpack-plugin": "^1.5.0",
     "sass-loader": "^7.1.0",
     "tailwindcss": "~1.0.3"
   }

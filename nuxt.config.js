@@ -1,4 +1,7 @@
-const pkg = require('./package')
+import glob from 'glob-all';
+import {join} from 'path';
+import pkg from './package.json';
+import PurgecssPlugin from 'purgecss-webpack-plugin';
 
 module.exports = {
   mode: 'universal',
@@ -6,12 +9,12 @@ module.exports = {
   /*
   ** Environment variables
   */
- env: {
-  consumerKey:         process.env.NODE_ENV !== 'production' ? (process.env.LOCAL_CONSUMER_KEY ? process.env.LOCAL_CONSUMER_KEY : process.env.DEV_CONSUMER_KEY) : process.env.CONSUMER_KEY,
-  consumerSecret:      process.env.NODE_ENV !== 'production' ? (process.env.LOCAL_CONSUMER_SECRET ? process.env.LOCAL_CONSUMER_SECRET : process.env.DEV_CONSUMER_SECRET) : process.env.CONSUMER_SECRET,
-  accessToken:         process.env.NODE_ENV !== 'production' ? (process.env.LOCAL_ACCESS_TOKEN ? process.env.LOCAL_ACCESS_TOKEN : process.env.DEV_ACCESS_TOKEN) : process.env.ACCESS_TOKEN,
-	accessTokenSecret:   process.env.NODE_ENV !== 'production' ? (process.env.LOCAL_ACCESS_TOKEN_SECRET ? process.env.LOCAL_ACCESS_TOKEN_SECRET : process.env.DEV_ACCESS_TOKEN_SECRET) : process.env.ACCESS_TOKEN_SECRET
- },
+  env: {
+    consumerKey:         process.env.NODE_ENV !== 'production' ? (process.env.LOCAL_CONSUMER_KEY ? process.env.LOCAL_CONSUMER_KEY : process.env.DEV_CONSUMER_KEY) : process.env.CONSUMER_KEY,
+    consumerSecret:      process.env.NODE_ENV !== 'production' ? (process.env.LOCAL_CONSUMER_SECRET ? process.env.LOCAL_CONSUMER_SECRET : process.env.DEV_CONSUMER_SECRET) : process.env.CONSUMER_SECRET,
+    accessToken:         process.env.NODE_ENV !== 'production' ? (process.env.LOCAL_ACCESS_TOKEN ? process.env.LOCAL_ACCESS_TOKEN : process.env.DEV_ACCESS_TOKEN) : process.env.ACCESS_TOKEN,
+    accessTokenSecret:   process.env.NODE_ENV !== 'production' ? (process.env.LOCAL_ACCESS_TOKEN_SECRET ? process.env.LOCAL_ACCESS_TOKEN_SECRET : process.env.DEV_ACCESS_TOKEN_SECRET) : process.env.ACCESS_TOKEN_SECRET
+  },
 
   /*
   ** Headers of the page
@@ -51,7 +54,7 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
- plugins: [],
+  plugins: [],
 
   /*
   ** Nuxt.js modules
@@ -79,6 +82,13 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    extractCSS: true,
+    postcss: {
+      plugins: {
+        tailwindcss: join(__dirname, 'tailwind.config.js')
+      }
+    },
+
     /*
     ** You can extend webpack config here
     */
@@ -91,7 +101,20 @@ module.exports = {
           loader: 'eslint-loader',
           exclude: /(node_modules)/
         });
-      }
+      };
+
+      if(!isDev) {
+        config.plugins.push(
+          new PurgecssPlugin({
+            paths: glob.sync([
+              join(__dirname, './pages/**/*.vue'),
+              join(__dirname, './layouts/**/*.vue'),
+              join(__dirname, './components/**/*.vue')
+            ]),
+            whitelist: ['html', 'body']
+          })
+        )
+      };
 
       config.node = {
         console: true,
