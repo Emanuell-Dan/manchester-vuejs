@@ -25,16 +25,24 @@
       :class="{'nav__desktop--show': isNavOpen}"
       class="nav__desktop fixed z-10 bg-black font-bold w-full"
     >
-      <ul class="nav__list list-reset flex flex-col md:flex-row items-center md:justify-center mt-12 md:mt-4 mb-6 md:mb-4">
-        <li 
-          v-for="(item, index) in navItems"
-          :key="index"
-          class="nav__item cursor-pointer hover:text-white focus:text-white my-1 md:mx-2"
-          @click="$emit('scrollToSection', item, isNavOpen = false)"
-        >
-          {{ item }}
-        </li>
-      </ul>
+      <div class="nav__desktop-inner relative">
+        <ul class="nav__list list-reset flex flex-col md:flex-row items-center md:justify-center mt-12 md:mt-4 mb-6 md:mb-4">
+          <li 
+            v-for="(item, index) in navItems"
+            :key="index"
+            class="nav__item cursor-pointer hover:text-white focus:text-white my-1 md:mx-2"
+            @click="$emit('scrollToSection', item, isNavOpen = false)"
+          >
+            {{ item }}
+          </li>
+        </ul>
+        <a
+          href="https://github.com/Emanuell-Dan/manchester-vuejs"
+          target="_blank"
+          title="Manchester Vue.js GitHub repo"
+          class="nav__link absolute h-5"
+        />
+      </div>
     </nav>
   </div>
 </template>
