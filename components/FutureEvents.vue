@@ -11,7 +11,7 @@
       class="future-events__card"
     >
       <a 
-        :href="event.event_url"
+        :href="event.link"
         target="_blank"
         class="future-events__url bg-white flex flex-col md:flex-row rounded-lg max-w-3xl m-auto p-8"
       >
