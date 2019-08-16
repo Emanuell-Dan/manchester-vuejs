@@ -16,7 +16,7 @@
         class="past-events__item flex"
       >
         <a 
-          :href="event.event_url"
+          :href="event.link"
           target="_blank"
           class="past-events__url bg-white flex items-center rounded-lg w-full m-2"
         >
