@@ -17,9 +17,9 @@ export const mutations = {
 
 export const actions = {
 	async getPastEvents(store) {
-		await getPastEvents().then(result => store.commit('storePastEvents', result.data.results));
+		await getPastEvents().then(result => store.commit('storePastEvents', result.data));
 	},
 	async getFutureEvents(store) {
-		await getFutureEvents().then(result => store.commit('storeFutureEvents', result.data.results));
+		await getFutureEvents().then(result => store.commit('storeFutureEvents', result.data));
 	}
 };
