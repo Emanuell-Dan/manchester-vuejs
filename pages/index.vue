@@ -13,7 +13,8 @@
         <news :tweets="twitter.timeline" />
         <span 
           class="scroll-top absolute shadow-md rounded text-center bottom-0 cursor-pointer mb-4 md:mb-16 lg:mr-20"
-          @click="$el.scrollIntoView({ behavior: 'smooth' })" />
+          @click="$el.scrollIntoView({ behavior: 'smooth' })"
+        />
       </div>
     </div>
   </div>

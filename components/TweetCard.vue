@@ -7,25 +7,30 @@
         'md:mt-32': gridPosition === 'right'
       }
     ]"
-    class="tweet-card__list flex flex-col items-center mx-2 lg:mx-4">
+    class="tweet-card__list flex flex-col items-center mx-2 lg:mx-4"
+  >
     <li 
       v-for="(tweet, index) in tweets"
       :key="index"
-      class="tweet-card__item bg-white flex items-center max-w-md rounded-lg my-2">
+      class="tweet-card__item bg-white flex items-center max-w-md rounded-lg my-2"
+    >
       <a 
         :href="`https://twitter.com/${getUserScreenName(index)}/status/${getUserId(index)}`"
         target="_blank"
-        class="block py-4 px-6">
+        class="block py-4 px-6"
+      >
         <p 
           v-if="tweet.retweeted_status"
-          class="tweet-card__retweeted relative pl-8 mb-2">
+          class="tweet-card__retweeted relative pl-8 mb-2"
+        >
           Retweeted
         </p>
         <div class="tweet-card__header flex items-center mb-2">
           <img 
             :src="getProfileImage(index)" 
             alt=""
-            class="tweet-card__profile-logo rounded">
+            class="tweet-card__profile-logo rounded"
+          >
           <p class="tweet-card__profile-name pl-2">{{ getUserName(index) }}</p>
         </div>
 
