@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FutureEvents.vue should render with expected html structure 1`] = `
+<div
+  class="future-events relative pt-16"
+  id="future-events"
+>
+  <h2
+    class="future-events__heading font-bold text-center text-2xl md:text-4xl mb-4 md:mb-8"
+  >
+    Coming next
+  </h2>
+   
+  <div
+    class="future-events__card"
+  >
+    <a
+      class="future-events__url bg-white flex flex-col md:flex-row rounded-lg max-w-3xl m-auto p-8"
+      target="_blank"
+    >
+      <div
+        class="future-events__event-info flex-grow"
+      >
+        <h3
+          class="future-events__event-name font-bold pb-4"
+        >
+          vue.js meetup
+        </h3>
+         
+        <p
+          class="future-events__event-attendees"
+        >
+          2  attendees
+        </p>
+      </div>
+       
+      <div
+        class="future-events__event-logistics"
+      >
+        <p
+          class="future-events__event-date font-medium pb-2"
+        >
+          lid Date at Invalid D
+        </p>
+         
+        <p
+          class="future-events__event-venue"
+        >
+          Spaces
+        </p>
+         
+        <p
+          class="future-events__event-address"
+        >
+          57 Spring Gardens
+        </p>
+         
+        <p
+          class="future-events__event-address"
+        >
+          Manchester
+        </p>
+      </div>
+    </a>
+  </div>
+</div>
+`;

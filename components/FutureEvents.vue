@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import dateAndTime from '~/mixins/dateAndTime.js';
+import dateAndTime from '../mixins/dateAndTime.js';
 
 export default {
   name: 'FutureEvents',

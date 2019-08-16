@@ -9,6 +9,7 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
+    "test": "jest --config test/unit/jest.conf.js --coverage",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",
@@ -22,19 +23,39 @@
     "twit": "^2.2.11"
   },
   "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-syntax-import-meta": "^7.2.0",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/register": "^7.4.4",
     "@fullhuman/postcss-purgecss": "^1.2.0",
     "@nuxtjs/proxy": "^1.3.3",
     "@nuxtjs/style-resources": "^0.1.2",
+    "@vue/test-utils": "^1.0.0-beta.29",
     "autoprefixer": "^8.6.4",
-    "babel-eslint": "^8.2.1",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "^10.0.2",
+    "babel-jest": "^24.8.0",
     "eslint": "^5.16.0",
     "eslint-loader": "^2.0.0",
     "eslint-plugin-vue": "^4.0.0",
     "glob-all": "^3.1.0",
+    "jest": "^24.8.0",
+    "jest-junit": "^7.0.0",
+    "jest-serializer-vue": "^2.0.2",
+    "jest-vue-preprocessor": "^1.5.0",
     "node-sass": "^4.11.0",
     "nodemon": "^1.19.1",
     "purgecss-webpack-plugin": "^1.5.0",
     "sass-loader": "^7.1.0",
-    "tailwindcss": "~1.0.3"
+    "tailwindcss": "~1.0.3",
+    "vue-jest": "^3.0.4",
+    "vue-loader": "^15.5.0",
+    "vue-template-compiler": "^2.6.10",
+    "vue-test-utils": "^1.0.0-beta.10"
+  },
+  "jest-junit": {
+    "suiteName": "Frontend Tests",
+    "output": "./build/report/tests/junit.xml"
   }
 }
