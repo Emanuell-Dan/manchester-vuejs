@@ -30,7 +30,7 @@ exports[`FutureEvents.vue should render with expected html structure 1`] = `
         <p
           class="future-events__event-attendees"
         >
-          2  attendees
+          2 / 10 attendees
         </p>
       </div>
        
@@ -40,7 +40,7 @@ exports[`FutureEvents.vue should render with expected html structure 1`] = `
         <p
           class="future-events__event-date font-medium pb-2"
         >
-          lid Date at Invalid D
+          Jul 05 2018 at 18:30
         </p>
          
         <p

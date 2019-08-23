@@ -44,7 +44,7 @@ export default {
   },
   computed: {
     getAttendeesLimit() {
-      return this.event.rsvp_limit ? `/ ${this.event.rsvp_limit}` : '';
+      return this.event && this.event.rsvp_limit ? `/ ${this.event.rsvp_limit}` : '';
     }
   }
 };

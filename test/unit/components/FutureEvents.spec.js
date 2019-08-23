@@ -9,7 +9,9 @@ describe('FutureEvents.vue', () => {
 			propsData: {
 				event: {
 					name: 'vue.js meetup',
+					rsvp_limit: 10,
 					yes_rsvp_count: 2,
+					time: 1530811800000,
 					venue: {
 						name: 'Spaces',
 						address_1: '57 Spring Gardens',
@@ -27,7 +29,8 @@ describe('FutureEvents.vue', () => {
 	describe('No event', () => {
 		it('does not render future event card', () => {
 			cmp.setProps({ event: null});
-			expect(cmp.find('.future-events__url').exists()).toBeFalsy();
+			console.log(cmp.vm.event);
+			expect(cmp.find('.future-events__card').exists()).toBeFalsy();
 		});
 	});
 
@@ -42,12 +45,16 @@ describe('FutureEvents.vue', () => {
 		});
 
 		it('displays correct number of attendees', () => {
-			expect(cmp.find('.future-events__event-attendees').text()).toBe('2  attendees');
+			expect(cmp.find('.future-events__event-attendees').text()).toBe('2 / 10 attendees');
 		});
 
 		describe('displays correct event logistics', () => {
 			it('renders Venue name', () => {
 				expect(cmp.find('.future-events__event-venue').text()).toBe('Spaces');
+			});
+
+			it('renders event time', () => {
+				expect(cmp.find('.future-events__event-date').text()).toBe('Jul 05 2018 at 18:30');
 			});
 
 			it('renders address line 1', () => {
