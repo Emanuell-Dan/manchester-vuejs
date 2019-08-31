@@ -1,4 +1,5 @@
 import Twit from 'twit';
+import mockedData from '~/data/twitter.json';
 
 const T = new Twit({
   consumer_key:         process.env.consumerKey,
@@ -20,6 +21,10 @@ export const mutations = {
 
 export const actions = {
 	async getTimeline(store) {
-		T.get('statuses/user_timeline', { screen_name: 'vuejsmcr', count: 9 }).then(result =>	store.commit('buildTimeline', result.data));
+		if (process.env.NODE_ENV === 'production') {
+			T.get('statuses/user_timeline', { screen_name: 'vuejsmcr', count: 9 }).then(result =>	store.commit('buildTimeline', result.data));
+    } else {
+			store.commit('buildTimeline', mockedData);
+		}
 	}
 };
