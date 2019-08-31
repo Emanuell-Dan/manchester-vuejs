@@ -14,6 +14,22 @@
 		}
 	}
 
+	&__link {
+		left: 20px;
+		top: -35px;
+		
+		@media (min-width: 768px) {
+			left: auto;
+			right: 20px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		&::after {
+			content: url('../../../static/github.svg');
+		}
+	}
+
 	&__mobile {
 		width: 30px;
 		transform: rotate(0deg);
