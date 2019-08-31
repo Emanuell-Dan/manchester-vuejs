@@ -13,7 +13,6 @@ export const mutations = {
 export const actions = {
 	async getTimeline(store) {
 		if (process.env.NODE_ENV === 'production') {
-			console.log(getTimeline);
 			await getTimeline().then(result => store.commit('buildTimeline', result.data));
     } else {
 			store.commit('buildTimeline', getTimeline);
