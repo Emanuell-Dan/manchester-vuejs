@@ -61,7 +61,7 @@ describe('FutureEvents.vue', () => {
 		});
 
 		describe('displays correct event logistics', () => {
-			it('renders Venue name', () => {
+			it('renders venue name', () => {
 				expect(cmp.find('.future-events__event-venue').text()).toBe('Spaces');
 			});
 

@@ -17,7 +17,7 @@ describe('Navigation.vue', () => {
 			expect(cmp.find('.nav__desktop').exists()).toBeTruthy();
 		});
 
-		it('emits scrollToSection event when item is clicked', () => {
+		it('emits scrollToSection event when an item is clicked', () => {
 			cmp.find('.nav__item:first-child').trigger('click');
 			expect(cmp.emitted().scrollToSection).toBeTruthy();
 			expect(cmp.vm.isNavOpen).toBeFalsy();
