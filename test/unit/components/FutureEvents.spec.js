@@ -43,8 +43,15 @@ describe('FutureEvents.vue', () => {
 			expect(cmp.find('.future-events__event-name').text()).toBe('vue.js meetup');
 		});
 
-		it('displays correct number of attendees', () => {
-			expect(cmp.find('.future-events__event-attendees').text()).toBe('2 / 10 attendees');
+		describe('number of attendees', () => {
+			it('displays number of attendees with limit', () => {
+				expect(cmp.find('.future-events__event-attendees').text()).toBe('2 / 10 attendees');
+			});
+
+			it('does not display limit', () => {
+				cmp.setProps({ event: { ...cmp.vm.event, rsvp_limit: null }});
+				expect(cmp.find('.future-events__event-attendees').text()).toBe('2  attendees');
+			});
 		});
 
 		describe('displays correct event logistics', () => {
