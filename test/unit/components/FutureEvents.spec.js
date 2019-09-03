@@ -27,9 +27,15 @@ describe('FutureEvents.vue', () => {
 	});
 
 	describe('No event', () => {
-		it('does not render future event card', () => {
+		beforeEach(() => {
 			cmp.setProps({ event: null});
+		});
+		it('does not render future event card', () => {
 			expect(cmp.find('.future-events__card').exists()).toBeFalsy();
+		});
+
+		it('displays correct text', () => {
+			expect(cmp.find('.future-events__tba').text()).toBe('Watch this space...');
 		});
 	});
 
