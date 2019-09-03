@@ -26,18 +26,19 @@ module.exports = {
 	],
 	coverageDirectory: '<rootDir>/build/report/coverage',
 	collectCoverageFrom: [
-		'**/*.{js,vue}',
-		'!**/node_modules/**'
+		'**/mixins/**',
+		'**/components/**',
+		'!**/test/**'
 	],
 	modulePaths: [
 		'<rootDir>'
 	],
 	coverageThreshold: {
 		global: {
-			branches: 96.5,
-			functions: 98,
-			lines: 99,
-			statements: 99
+			branches: 80,
+			functions: 80,
+			lines: 80,
+			statements: 80
 		}
 	}
 };

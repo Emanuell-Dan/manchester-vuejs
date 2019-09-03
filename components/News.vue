@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import TweetCard from '~/components/TweetCard';
+import TweetCard from '@/components/TweetCard.vue';
 
 export default {
   name: 'News',

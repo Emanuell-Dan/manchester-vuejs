@@ -29,7 +29,6 @@ describe('FutureEvents.vue', () => {
 	describe('No event', () => {
 		it('does not render future event card', () => {
 			cmp.setProps({ event: null});
-			console.log(cmp.vm.event);
 			expect(cmp.find('.future-events__card').exists()).toBeFalsy();
 		});
 	});
