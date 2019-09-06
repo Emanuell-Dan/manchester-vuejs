@@ -8,4 +8,4 @@ const T = new Twit({
 	timeout_ms: 60 * 1000
 });
 
-export const getTimeline = () => T.get('statuses/user_timeline', { screen_name: 'vuejsmcr', count: 9 });
+export default () => T.get('statuses/user_timeline', { screen_name: 'vuejsmcr', count: 9 });

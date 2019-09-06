@@ -1,4 +1,4 @@
-import {getTimeline} from '~/services/TwitterService';
+import getTimeline from '~twitterTimeline';
 
 export const state = () => ({
 	timeline: []

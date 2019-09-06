@@ -10,10 +10,10 @@ module.exports = {
   ** Environment variables
   */
   env: {
-    consumerKey:         process.env.NODE_ENV !== 'production' ? (process.env.LOCAL_CONSUMER_KEY ? process.env.LOCAL_CONSUMER_KEY : process.env.DEV_CONSUMER_KEY) : process.env.CONSUMER_KEY,
-    consumerSecret:      process.env.NODE_ENV !== 'production' ? (process.env.LOCAL_CONSUMER_SECRET ? process.env.LOCAL_CONSUMER_SECRET : process.env.DEV_CONSUMER_SECRET) : process.env.CONSUMER_SECRET,
-    accessToken:         process.env.NODE_ENV !== 'production' ? (process.env.LOCAL_ACCESS_TOKEN ? process.env.LOCAL_ACCESS_TOKEN : process.env.DEV_ACCESS_TOKEN) : process.env.ACCESS_TOKEN,
-    accessTokenSecret:   process.env.NODE_ENV !== 'production' ? (process.env.LOCAL_ACCESS_TOKEN_SECRET ? process.env.LOCAL_ACCESS_TOKEN_SECRET : process.env.DEV_ACCESS_TOKEN_SECRET) : process.env.ACCESS_TOKEN_SECRET
+    consumerKey:         process.env.CONSUMER_KEY,
+    consumerSecret:      process.env.CONSUMER_SECRET,
+    accessToken:         process.env.ACCESS_TOKEN,
+    accessTokenSecret:   process.env.ACCESS_TOKEN_SECRET
   },
 
   /*
@@ -93,6 +93,9 @@ module.exports = {
     ** You can extend webpack config here
     */
     extend(config, { isDev, isClient }) {
+      // Dynamic imports
+      config.resolve.alias['~twitterTimeline'] = !isDev ? '~/services/TwitterService.js' : '~/data/twitterMock.js';
+
       // Run ESLint on save
       if (isDev && isClient) {
         config.module.rules.push({
@@ -103,7 +106,7 @@ module.exports = {
         });
       };
 
-      if(!isDev) {
+      if (!isDev) {
         config.plugins.push(
           new PurgecssPlugin({
             paths: glob.sync([
