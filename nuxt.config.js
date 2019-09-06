@@ -94,7 +94,7 @@ module.exports = {
     */
     extend(config, { isDev, isClient }) {
       // Dynamic imports
-      config.resolve.alias['~twitterTimeline'] = !isDev ? '~/services/TwitterService.js' : '~/data/twitter.json';
+      config.resolve.alias['~twitterTimeline'] = !isDev ? '~/services/TwitterService.js' : '~/data/twitterMock.js';
 
       // Run ESLint on save
       if (isDev && isClient) {
