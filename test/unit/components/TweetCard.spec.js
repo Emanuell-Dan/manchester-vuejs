@@ -17,13 +17,39 @@ describe('TweetCard.vue', () => {
 						retweet_count: 5,
 						favorite_count: 15
 					}
-				]
+				],
+				gridPosition: 'left'
 			}
 		});
 	});
 
 	it('should render with expected html structure', () => {
 		expect(cmp.element).toMatchSnapshot();
+	});
+
+	describe('grid position', () => {
+		describe('left', () => {
+			it('renders with correct modifier', () => {
+				expect(cmp.find('.tweet-card--left').classes()).toContain('md:mt-16');
+				expect(cmp.find('.tweet-card--left').classes()).not.toContain('md:mt-32');
+			});
+		});
+
+		describe('right', () => {
+			it('renders with correct modifier', () => {
+				cmp.setProps({gridPosition: 'right'});
+				expect(cmp.find('.tweet-card--right').classes()).toContain('md:mt-32');
+				expect(cmp.find('.tweet-card--right').classes()).not.toContain('md:mt-16');
+			});
+		});
+
+		describe('center', () => {
+			it('renders with correct modifier', () => {
+				cmp.setProps({gridPosition: 'center'});
+				expect(cmp.find('.tweet-card--center').classes()).not.toContain('md:mt-32');
+				expect(cmp.find('.tweet-card--center').classes()).not.toContain('md:mt-16');
+			});
+		});
 	});
 
 	describe('twitter card', () => {
