@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TweetCard.vue should render with expected html structure 1`] = `
+<ul
+  class="tweet-card__list flex flex-col items-center mx-2 lg:mx-4 tweet-card--undefined"
+>
+  <li
+    class="tweet-card__item bg-white flex items-center max-w-md rounded-lg my-2"
+  >
+    <a
+      class="block py-4 px-6"
+      href="https://twitter.com/Gill2929/status/undefined"
+      target="_blank"
+    >
+      <!---->
+       
+      <div
+        class="tweet-card__header flex items-center mb-2"
+      >
+        <img
+          alt=""
+          class="tweet-card__profile-logo rounded"
+        />
+         
+        <p
+          class="tweet-card__profile-name pl-2"
+        >
+          Harry Hill
+        </p>
+      </div>
+       
+      <div
+        class="tweet-card__content mb-2"
+      >
+        <p
+          class="tweet-card__text"
+        >
+          twitter text here
+        </p>
+      </div>
+       
+      <div
+        class="tweet-card__footer flex"
+      >
+        <p
+          class="tweet-card__count relative pl-8 pr-2 mr-2"
+        >
+          5
+        </p>
+         
+        <p
+          class="tweet-card__likes relative pl-8"
+        >
+          15
+        </p>
+      </div>
+    </a>
+  </li>
+</ul>
+`;

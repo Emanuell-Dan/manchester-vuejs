@@ -1,5 +1,5 @@
 import About from '@/components/About.vue';
-import { mount } from 'vue-test-utils';
+import { mount } from '@vue/test-utils';
 
 describe('About.vue', () => {
 	let cmp;

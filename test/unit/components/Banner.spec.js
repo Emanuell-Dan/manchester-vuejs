@@ -1,5 +1,5 @@
 import Banner from '@/components/Banner.vue';
-import { mount } from 'vue-test-utils';
+import { mount } from '@vue/test-utils';
 
 describe('Banner.vue', () => {
 	let cmp;

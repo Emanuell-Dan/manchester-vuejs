@@ -1,5 +1,5 @@
 import FutureEvents from '@/components/FutureEvents.vue';
-import { mount } from 'vue-test-utils';
+import { mount } from '@vue/test-utils';
 
 describe('FutureEvents.vue', () => {
 	let cmp;

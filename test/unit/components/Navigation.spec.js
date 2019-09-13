@@ -1,5 +1,5 @@
 import Navigation from '@/components/Navigation.vue';
-import { mount } from 'vue-test-utils';
+import { mount } from '@vue/test-utils';
 
 describe('Navigation.vue', () => {
 	let cmp;

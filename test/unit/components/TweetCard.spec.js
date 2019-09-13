@@ -1,5 +1,5 @@
 import TweetCard from '@/components/TweetCard.vue';
-import { mount } from 'vue-test-utils';
+import { mount } from '@vue/test-utils';
 
 describe('TweetCard.vue', () => {
 	let cmp;

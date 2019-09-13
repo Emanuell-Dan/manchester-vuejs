@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { createLocalVue } from 'vue-test-utils';
+import { createLocalVue } from '@vue/test-utils';
 
 global.getSelection = () => '';
 
