@@ -7,7 +7,23 @@ describe('PastEvents.vue', () => {
 
 	beforeEach(() => {
 		cmp = mount(PastEvents, {
-			propsData: {
+			mixins: [dateAndTime]
+		});
+	});
+
+	it('should render with expected html structure', () => {
+		expect(cmp.element).toMatchSnapshot();
+	});
+
+	describe('No past events', () => {
+		it('does not render future event card', () => {
+			expect(cmp.find('.past-events__list').exists()).toBeFalsy();
+		});
+	});
+
+	describe('has past events', () => {
+		beforeEach(() => {
+			cmp.setProps({
 				events: [
 					{
 						id: '001',
@@ -21,23 +37,10 @@ describe('PastEvents.vue', () => {
 						name: 'Java Meetup',
 						yes_rsvp_count: 9
 					}
-				]},
-			mixins: [dateAndTime]
+				]
+			});
 		});
-	});
 
-	it('should render with expected html structure', () => {
-		expect(cmp.element).toMatchSnapshot();
-	});
-
-	describe('No past events', () => {
-		it('does not render future event card', () => {
-			cmp.setProps({ events:[]});
-			expect(cmp.find('.past-events__list').exists()).toBeFalsy();
-		});
-	});
-
-	describe('has past events', () => {
 		it('renders past event card', () => {
 			expect(cmp.find('.past-events__list').exists()).toBeTruthy();
 		});
@@ -56,5 +59,4 @@ describe('PastEvents.vue', () => {
 			});
 		});
 	});
-
 });

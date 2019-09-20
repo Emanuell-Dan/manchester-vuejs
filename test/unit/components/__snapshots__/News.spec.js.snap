@@ -16,17 +16,7 @@ exports[`News.vue should render with expected html structure 1`] = `
   <section
     class="news__grid flex flex-col md:flex-row justify-center"
   >
-    <ul
-      class="tweet-card__list flex flex-col items-center mx-2 lg:mx-4 tweet-card--left md:mt-16"
-    />
-     
-    <ul
-      class="tweet-card__list flex flex-col items-center mx-2 lg:mx-4 tweet-card--center"
-    />
-     
-    <ul
-      class="tweet-card__list flex flex-col items-center mx-2 lg:mx-4 tweet-card--right md:mt-32"
-    />
+    <!---->
   </section>
 </div>
 `;

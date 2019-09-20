@@ -5,8 +5,26 @@ describe('FutureEvents.vue', () => {
 	let cmp;
 
 	beforeEach(() => {
-		cmp = mount(FutureEvents, {
-			propsData: {
+		cmp = mount(FutureEvents);
+	});
+
+	it('should render with expected html structure', () => {
+		expect(cmp.element).toMatchSnapshot();
+	});
+
+	describe('No event', () => {
+		it('does not render future event card', () => {
+			expect(cmp.find('.future-events__card').exists()).toBeFalsy();
+		});
+
+		it('displays correct text', () => {
+			expect(cmp.find('.future-events__tba').text()).toBe('Watch this space...');
+		});
+	});
+
+	describe('has event', () => {
+		beforeEach(() => {
+			cmp.setProps({
 				event: {
 					name: 'vue.js meetup',
 					rsvp_limit: 10,
@@ -18,28 +36,9 @@ describe('FutureEvents.vue', () => {
 						address_2: 'Manchester'
 					}
 				}
-			}
-		});
-	});
-
-	it('should render with expected html structure', () => {
-		expect(cmp.element).toMatchSnapshot();
-	});
-
-	describe('No event', () => {
-		beforeEach(() => {
-			cmp.setProps({ event: null});
-		});
-		it('does not render future event card', () => {
-			expect(cmp.find('.future-events__card').exists()).toBeFalsy();
+			});
 		});
 
-		it('displays correct text', () => {
-			expect(cmp.find('.future-events__tba').text()).toBe('Watch this space...');
-		});
-	});
-
-	describe('has event', () => {
 		it('renders future event card', () => {
 			expect(cmp.find('.future-events__card').exists()).toBeTruthy();
 		});

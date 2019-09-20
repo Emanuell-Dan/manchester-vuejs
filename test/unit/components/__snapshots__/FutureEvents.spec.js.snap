@@ -13,57 +13,12 @@ exports[`FutureEvents.vue should render with expected html structure 1`] = `
   
   </h2>
    
-  <div
-    class="future-events__card"
+  <h3
+    class="future-events__tba text-center font-bold"
   >
-    <a
-      class="future-events__url bg-white flex flex-col md:flex-row rounded-lg max-w-3xl m-auto p-8"
-      target="_blank"
-    >
-      <div
-        class="future-events__event-info flex-grow"
-      >
-        <h3
-          class="future-events__event-name font-bold pb-4"
-        >
-          vue.js meetup
-        </h3>
-         
-        <p
-          class="future-events__event-attendees"
-        >
-          2 / 10 attendees
-        </p>
-      </div>
-       
-      <div
-        class="future-events__event-logistics"
-      >
-        <p
-          class="future-events__event-date font-medium pb-2"
-        >
-          Jul 05 2018 at 18:30
-        </p>
-         
-        <p
-          class="future-events__event-venue"
-        >
-          Spaces
-        </p>
-         
-        <p
-          class="future-events__event-address"
-        >
-          57 Spring Gardens
-        </p>
-         
-        <p
-          class="future-events__event-address"
-        >
-          Manchester
-        </p>
-      </div>
-    </a>
-  </div>
+    
+    Watch this space...
+  
+  </h3>
 </div>
 `;

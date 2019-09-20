@@ -8,20 +8,22 @@
     </h2>
 
     <section class="news__grid flex flex-col md:flex-row justify-center">
-      <tweet-card 
-        :tweets="tweets.slice(0, 3)"
-        grid-position="left"
-      />
+      <template v-if="tweets.length === 9">
+        <tweet-card
+          :tweets="tweets.slice(0, 3)"
+          grid-position="left"
+        />
 
-      <tweet-card 
-        :tweets="tweets.slice(3, 6)"
-        grid-position="center"
-      />
+        <tweet-card
+          :tweets="tweets.slice(3, 6)"
+          grid-position="center"
+        />
 
-      <tweet-card 
-        :tweets="tweets.slice(6, 9)"
-        grid-position="right"
-      />
+        <tweet-card
+          :tweets="tweets.slice(6, 9)"
+          grid-position="right"
+        />
+      </template>
     </section>
   </div>
 </template>

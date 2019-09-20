@@ -7,17 +7,6 @@ describe('TweetCard.vue', () => {
 	beforeEach(() => {
 		cmp = mount(TweetCard, {
 			propsData: {
-				tweets: [
-					{
-						user: {
-							screen_name: 'Gill2929',
-							name: 'Harry Hill',
-						},
-						text: 'twitter text here',
-						retweet_count: 5,
-						favorite_count: 15
-					}
-				],
 				gridPosition: 'left'
 			}
 		});
@@ -53,6 +42,32 @@ describe('TweetCard.vue', () => {
 	});
 
 	describe('twitter card', () => {
+		beforeEach(() => {
+			cmp.setProps({
+				tweets: [
+					{
+						user: {
+							screen_name: 'Gill2929',
+							name: 'Harry Hill',
+							profile_image_url_https: "https://pbs.twimg.com/profile_images/968837920688869376/KKtiQ1hY_normal.jpg"
+						},
+						id_str: 'uuid1',
+						text: 'twitter text here',
+						retweet_count: 5,
+						favorite_count: 15
+					}
+				]
+			});
+		});
+
+		it('screen name and userId are added to the url for href', () => {
+			expect(cmp.find('.block').element.href).toEqual('https://twitter.com/Gill2929/status/uuid1');
+		});
+
+		it('renders profile Image', () => {
+			expect(cmp.find('.tweet-card__profile-logo').attributes().src).toBe('https://pbs.twimg.com/profile_images/968837920688869376/KKtiQ1hY_normal.jpg');
+		});
+
 		it('renders user name', () => {
 			expect(cmp.find('.tweet-card__profile-name').text()).toBe('Harry Hill');
 		});
