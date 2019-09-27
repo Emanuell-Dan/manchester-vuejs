@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TweetCard.vue should render with expected html structure 1`] = `
+<ul
+  class="tweet-card__list flex flex-col items-center mx-2 lg:mx-4 tweet-card--left md:mt-16"
+/>
+`;

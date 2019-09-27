@@ -1,0 +1,36 @@
+{
+	"presets": [
+		[
+			"@babel/preset-env",
+			{
+				"modules": false,
+				"targets": {
+					"browsers": [
+						"> 1%",
+						"last 2 versions",
+						"ie >= 10"
+					]
+				}
+			}
+		]
+	],
+	"plugins": [
+		"@babel/plugin-transform-runtime",
+		"@babel/plugin-transform-modules-commonjs",
+		"@babel/plugin-syntax-dynamic-import",
+		["@babel/plugin-proposal-class-properties", { "loose": false }]
+	],
+	"env": {
+		"test": {
+			"presets": [
+				"@babel/preset-env"
+			],
+			"plugins": [
+				"@babel/plugin-transform-modules-commonjs",
+				"@babel/plugin-syntax-dynamic-import",
+				"dynamic-import-node",
+				["@babel/plugin-proposal-class-properties", { "loose": false }]
+			]
+		}
+	}
+}

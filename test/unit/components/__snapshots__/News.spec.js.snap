@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`News.vue should render with expected html structure 1`] = `
+<div
+  class="news py-16"
+  id="news"
+>
+  <h2
+    class="news__heading font-bold text-center text-2xl md:text-4xl mb-4 md:mb-8"
+  >
+    
+    Latest news
+  
+  </h2>
+   
+  <section
+    class="news__grid flex flex-col md:flex-row justify-center"
+  >
+    <!---->
+  </section>
+</div>
+`;

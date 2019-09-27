@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import dateAndTime from '~/mixins/dateAndTime.js';
+import dateAndTime from '../mixins/dateAndTime.js';
 
 export default {
   name: 'FutureEvents',
@@ -50,7 +50,7 @@ export default {
   },
   computed: {
     getAttendeesLimit() {
-      return this.event.rsvp_limit ? `/ ${this.event.rsvp_limit}` : '';
+      return this.event && this.event.rsvp_limit ? `/ ${this.event.rsvp_limit}` : '';
     }
   }
 };
