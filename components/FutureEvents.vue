@@ -13,6 +13,8 @@
       <a 
         :href="event.link"
         target="_blank"
+        :aria-label="`Upcoming event: ${event.name}`"
+        :title="`Upcoming event: ${event.name}`"
         class="future-events__url bg-white flex flex-col md:flex-row rounded-lg max-w-3xl m-auto p-8"
       >
         <div class="future-events__event-info flex-grow">

@@ -18,6 +18,8 @@
         <a 
           :href="event.link"
           target="_blank"
+          :aria-label="`Past event: ${event.name}`"
+          :title="`Past event: ${event.name}`"
           class="past-events__url bg-white flex items-center rounded-lg w-full m-2"
         >
           <div class="past-events__event-info px-4 py-8">

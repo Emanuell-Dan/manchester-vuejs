@@ -17,11 +17,13 @@
       <a 
         :href="`https://twitter.com/${getUserScreenName(index)}/status/${getUserId(index)}`"
         target="_blank"
+        :aria-label="`${getUserName(index)} on Twitter: ${getTweetMessage(index)}`"
+        :title="`${getUserName(index)} on Twitter: ${getTweetMessage(index)}`"
         class="block py-4 px-6"
       >
         <p 
           v-if="tweet.retweeted_status"
-          class="tweet-card__retweeted relative pl-8 mb-2"
+          class="tweet-card__retweeted relative font-bold pl-8 mb-2"
         >
           Retweeted
         </p>
@@ -39,8 +41,8 @@
         </div>
 
         <div class="tweet-card__footer flex">
-          <p class="tweet-card__count relative pl-8 pr-2 mr-2">{{ getRetweetsCount(index) }}</p>
-          <p class="tweet-card__likes relative pl-8">{{ getLikesCount(index) }}</p>
+          <p class="tweet-card__count relative font-bold pl-8 pr-2 mr-2">{{ getRetweetsCount(index) }}</p>
+          <p class="tweet-card__likes relative font-bold pl-8">{{ getLikesCount(index) }}</p>
         </div>
       </a>
     </li>
@@ -59,7 +61,7 @@ export default {
 			type: String,
 			required: true
 		}
-	},
+  },
 	methods: {
 		getUserScreenName(index) {
 			return this.tweets[index].retweeted_status ? this.tweets[index].retweeted_status.user.screen_name : this.tweets[index].user.screen_name;

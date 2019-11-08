@@ -37,6 +37,8 @@
               <a
                 href="https://www.meetup.com/VueJS-Manchester/"
                 target="_blank"
+                aria-label="Find us on Meetup"
+                title="Find us on Meetup"
                 class="about__social-item--meetup cursor-pointer"
               />
             </li>
@@ -44,6 +46,8 @@
               <a
                 href="https://twitter.com/vuejsmcr"
                 target="_blank"
+                aria-label="Find us on Twitter"
+                title="Find us on Twitter"
                 class="about__social-item--twitter cursor-pointer"
               />
             </li>
