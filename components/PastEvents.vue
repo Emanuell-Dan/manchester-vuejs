@@ -18,6 +18,7 @@
         <a 
           :href="event.link"
           target="_blank"
+          rel="noreferrer"
           :aria-label="`Past event: ${event.name}`"
           :title="`Past event: ${event.name}`"
           class="past-events__url bg-white flex items-center rounded-lg w-full m-2"

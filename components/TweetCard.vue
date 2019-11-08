@@ -17,6 +17,7 @@
       <a 
         :href="`https://twitter.com/${getUserScreenName(index)}/status/${getUserId(index)}`"
         target="_blank"
+        rel="noreferrer"
         :aria-label="`${getUserName(index)} on Twitter: ${getTweetMessage(index)}`"
         :title="`${getUserName(index)} on Twitter: ${getTweetMessage(index)}`"
         class="block py-4 px-6"
