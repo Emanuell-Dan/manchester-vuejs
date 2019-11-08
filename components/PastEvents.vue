@@ -3,7 +3,7 @@
     id="past-events"
     class="past-events relative pt-16"
   >
-    <h2 class="past-events__heading font-bold text-center text-2xl md:text-4xl mb-4 md:mb-8">
+    <h2 class="past-events__heading font-bold underline text-center text-2xl md:text-4xl mb-4 md:mb-8">
       Past events
     </h2>
     <ul 

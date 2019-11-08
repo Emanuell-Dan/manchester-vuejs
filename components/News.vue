@@ -3,7 +3,7 @@
     id="news" 
     class="news py-16"
   >
-    <h2 class="news__heading font-bold text-center text-2xl md:text-4xl mb-4 md:mb-8">
+    <h2 class="news__heading text-white font-bold underline text-center text-2xl md:text-4xl mb-4 md:mb-8">
       Latest news
     </h2>
 
