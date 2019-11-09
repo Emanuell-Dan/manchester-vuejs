@@ -29,11 +29,13 @@
           Retweeted
         </p>
         <div class="tweet-card__header flex items-center mb-2">
-          <img 
-            :src="getProfileImage(index)" 
-            alt=""
-            class="tweet-card__profile-logo rounded"
-          >
+          <figure v-lazyload>
+            <img 
+              :data-url="getProfileImage(index)"
+              :alt="getUserName(index)" 
+              class="tweet-card__profile-logo rounded"
+            >
+          </figure>
           <p class="tweet-card__profile-name pl-2">{{ getUserName(index) }}</p>
         </div>
 
@@ -51,8 +53,13 @@
 </template>
 
 <script>
+import LazyLoadDirective from "~/directives/lazyLoad.js";
+
 export default {
-	name: 'TweetCard',
+  name: 'TweetCard',
+  directives: {
+    lazyload: LazyLoadDirective
+  },
 	props: {
 		tweets: {
       type: Array,
