@@ -39,6 +39,8 @@
         <a
           href="https://github.com/Emanuell-Dan/manchester-vuejs"
           target="_blank"
+          rel="noreferrer"
+          aria-label="Manchester Vue.js GitHub repo"
           title="Manchester Vue.js GitHub repo"
           class="nav__link absolute h-5"
         />

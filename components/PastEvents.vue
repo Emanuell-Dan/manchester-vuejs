@@ -3,7 +3,7 @@
     id="past-events"
     class="past-events relative pt-16"
   >
-    <h2 class="past-events__heading font-bold text-center text-2xl md:text-4xl mb-4 md:mb-8">
+    <h2 class="past-events__heading font-bold underline text-center text-2xl md:text-4xl mb-4 md:mb-8">
       Past events
     </h2>
     <ul 
@@ -18,6 +18,9 @@
         <a 
           :href="event.link"
           target="_blank"
+          rel="noreferrer"
+          :aria-label="`Past event: ${event.name}`"
+          :title="`Past event: ${event.name}`"
           class="past-events__url bg-white flex items-center rounded-lg w-full m-2"
         >
           <div class="past-events__event-info px-4 py-8">

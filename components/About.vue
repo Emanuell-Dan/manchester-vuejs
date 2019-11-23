@@ -3,7 +3,7 @@
     id="about"
     class="about pt-16"
   >
-    <h2 class="about__heading font-bold text-center text-2xl md:text-4xl mb-4 md:mb-8">
+    <h2 class="about__heading font-bold underline text-center text-2xl md:text-4xl mb-4 md:mb-8">
       What we're about
     </h2>
 			
@@ -37,6 +37,9 @@
               <a
                 href="https://www.meetup.com/VueJS-Manchester/"
                 target="_blank"
+                rel="noreferrer"
+                aria-label="Find us on Meetup"
+                title="Find us on Meetup"
                 class="about__social-item--meetup cursor-pointer"
               />
             </li>
@@ -44,6 +47,9 @@
               <a
                 href="https://twitter.com/vuejsmcr"
                 target="_blank"
+                rel="noreferrer"
+                aria-label="Find us on Twitter"
+                title="Find us on Twitter"
                 class="about__social-item--twitter cursor-pointer"
               />
             </li>
