@@ -1,10 +1,12 @@
-# Manchester Vue.js Community
+# [Manchester Vue.js Community](https://www.vuejsmcr.dev/)
 ![Twitter Follow](https://img.shields.io/twitter/follow/vuejsmcr.svg?style=social)
 
 [![Build Status](https://travis-ci.com/Emanuell-Dan/manchester-vuejs.svg?branch=master)](https://travis-ci.com/Emanuell-Dan/manchester-vuejs)
 ![GitHub](https://img.shields.io/github/license/Emanuell-Dan/manchester-vuejs.svg)
 
 > Home to curious and/or passionate Vue.js developers in and around Manchester, UK
+
+Join us on [meetup.com](https://www.meetup.com/VueJS-Manchester/) 
 
 ## Build Setup
 
@@ -56,4 +58,4 @@ Once the work has been completed please make sure that **linting** and **unit te
 
 [MIT](https://opensource.org/licenses/MIT)
 
-Copyright (c) 2019-present Vue.js Manchester Meetup Community
+Copyright (c) 2019-present [Vue.js Manchester Meetup Community](https://www.vuejsmcr.dev/)
