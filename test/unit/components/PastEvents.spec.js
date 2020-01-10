@@ -47,7 +47,7 @@ describe('PastEvents.vue', () => {
 
 		describe('displays correct past event information', () => {
 			it('renders past event time', () => {
-				expect(cmp.find('.past-events__event-date').text()).toBe('Mar 07 2019 at 18:30');
+				expect(cmp.find('.past-events__event-date').text()).toBe('Mar 07 2019 at 6:30:00');
 			});
 
 			it('renders event name', () => {

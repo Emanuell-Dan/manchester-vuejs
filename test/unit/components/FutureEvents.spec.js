@@ -65,7 +65,7 @@ describe('FutureEvents.vue', () => {
 			});
 
 			it('renders event time', () => {
-				expect(cmp.find('.future-events__event-date').text()).toBe('Jul 05 2018 at 18:30');
+				expect(cmp.find('.future-events__event-date').text()).toBe('Jul 05 2018 at 6:30:00');
 			});
 
 			it('renders address line 1', () => {
