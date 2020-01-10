@@ -19,8 +19,9 @@ describe('News.vue', () => {
 			expect(cmp.find(TweetCard).exists()).toBeFalsy();
 		});
 
-		it('renders with tweets', () => {
+		it('renders with tweets', async () => {
 			cmp.setProps({tweets: twitterData});
+			await cmp.vm.$nextTick();
 			expect(cmp.find(TweetCard).exists()).toBeTruthy();
 		});
 	});

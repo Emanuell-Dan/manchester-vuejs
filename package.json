@@ -54,6 +54,6 @@
   },
   "jest-junit": {
     "suiteName": "Frontend Tests",
-    "output": "./build/report/tests/junit.xml"
+    "outputName": "./build/report/tests/junit.xml"
   }
 }

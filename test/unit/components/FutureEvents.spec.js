@@ -53,8 +53,11 @@ describe('FutureEvents.vue', () => {
 				expect(cmp.find('.future-events__event-attendees').text()).toBe('2 / 10 attendees');
 			});
 
-			it('does not display limit', () => {
+			it('does not display limit', async() => {
 				cmp.setProps({ event: { ...cmp.vm.event, rsvp_limit: null }});
+
+				await cmp.vm.$nextTick();
+				
 				expect(cmp.find('.future-events__event-attendees').text()).toBe('2  attendees');
 			});
 		});
@@ -65,7 +68,7 @@ describe('FutureEvents.vue', () => {
 			});
 
 			it('renders event time', () => {
-				expect(cmp.find('.future-events__event-date').text()).toBe('Jul 05 2018 at 6:30:00');
+				expect(cmp.find('.future-events__event-date').text()).toBe('Jul 05 2018 at 18:30');
 			});
 
 			it('renders address line 1', () => {

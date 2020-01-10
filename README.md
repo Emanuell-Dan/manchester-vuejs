@@ -8,7 +8,7 @@
 
 Join us on [Meetup.com](https://www.meetup.com/VueJS-Manchester/) 
 
-## Build Setup
+## Commands
 
 ``` bash
 # install dependencies
@@ -23,6 +23,12 @@ $ yarn start
 
 # run linting
 $ yarn lint
+
+# run unit tests
+$ yarn test
+
+# run unit tests with snapshots
+$ yarn test -u
 ```
 
 ## Project Board

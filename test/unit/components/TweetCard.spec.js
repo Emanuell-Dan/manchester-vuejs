@@ -25,16 +25,22 @@ describe('TweetCard.vue', () => {
 		});
 
 		describe('right', () => {
-			it('renders with correct modifier', () => {
+			it('renders with correct modifier', async () => {
 				cmp.setProps({gridPosition: 'right'});
+
+				await cmp.vm.$nextTick();
+
 				expect(cmp.find('.tweet-card--right').classes()).toContain('md:mt-32');
 				expect(cmp.find('.tweet-card--right').classes()).not.toContain('md:mt-16');
 			});
 		});
 
 		describe('center', () => {
-			it('renders with correct modifier', () => {
+			it('renders with correct modifier', async () => {
 				cmp.setProps({gridPosition: 'center'});
+
+				await cmp.vm.$nextTick();
+				
 				expect(cmp.find('.tweet-card--center').classes()).not.toContain('md:mt-32');
 				expect(cmp.find('.tweet-card--center').classes()).not.toContain('md:mt-16');
 			});
