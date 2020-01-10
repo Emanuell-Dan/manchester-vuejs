@@ -53,7 +53,7 @@
 </template>
 
 <script>
-import LazyLoadDirective from "~/directives/lazyLoad.js";
+import LazyLoadDirective from "../directives/lazyLoad.js";
 
 export default {
   name: 'TweetCard',

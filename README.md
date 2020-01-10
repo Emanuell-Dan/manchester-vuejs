@@ -6,16 +6,13 @@
 
 > Home to curious and/or passionate Vue.js developers in and around Manchester, UK
 
-Join us on [meetup.com](https://www.meetup.com/VueJS-Manchester/) 
+Join us on [Meetup.com](https://www.meetup.com/VueJS-Manchester/) 
 
 ## Build Setup
 
 ``` bash
 # install dependencies
 $ yarn install
-
-# Update your current shell with the exported variables in .env
-$ source .env
 
 # serve with hot reload at localhost:3000
 $ yarn run dev
@@ -27,6 +24,7 @@ $ yarn start
 # run linting
 $ yarn lint
 ```
+
 ## Project Board
 
 For the time being, Trello will be our tool of choice. It is simple, fast and super easy to use. Moreover, I find its UI/UX as good on mobile as on desktop. It is visible to anyone with the link and will show up in search engines. **Only those invited to the team can add and edit the board.**

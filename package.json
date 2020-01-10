@@ -16,10 +16,9 @@
     "heroku-postbuild": "npm run build"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.5.4",
-    "body-scroll-toggle": "^0.2.0",
+    "@nuxtjs/axios": "^5.9.2",
     "cross-env": "^5.2.0",
-    "nuxt": "^2.8.1",
+    "nuxt": "^2.11.0",
     "twit": "^2.2.11"
   },
   "devDependencies": {

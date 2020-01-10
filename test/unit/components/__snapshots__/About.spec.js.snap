@@ -6,7 +6,7 @@ exports[`About.vue should render with expected html structure 1`] = `
   id="about"
 >
   <h2
-    class="about__heading font-bold text-center text-2xl md:text-4xl mb-4 md:mb-8"
+    class="about__heading font-bold underline text-center text-2xl md:text-4xl mb-4 md:mb-8"
   >
     
     What we're about
@@ -82,9 +82,12 @@ exports[`About.vue should render with expected html structure 1`] = `
             class="about__social-item mr-4"
           >
             <a
+              aria-label="Find us on Meetup"
               class="about__social-item--meetup cursor-pointer"
               href="https://www.meetup.com/VueJS-Manchester/"
+              rel="noreferrer"
               target="_blank"
+              title="Find us on Meetup"
             />
           </li>
            
@@ -92,9 +95,12 @@ exports[`About.vue should render with expected html structure 1`] = `
             class="about__social-item about__social-item--twitter"
           >
             <a
+              aria-label="Find us on Twitter"
               class="about__social-item--twitter cursor-pointer"
               href="https://twitter.com/vuejsmcr"
+              rel="noreferrer"
               target="_blank"
+              title="Find us on Twitter"
             />
           </li>
         </ul>

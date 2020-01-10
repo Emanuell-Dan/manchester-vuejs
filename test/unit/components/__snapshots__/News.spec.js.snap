@@ -6,7 +6,7 @@ exports[`News.vue should render with expected html structure 1`] = `
   id="news"
 >
   <h2
-    class="news__heading font-bold text-center text-2xl md:text-4xl mb-4 md:mb-8"
+    class="news__heading text-white font-bold underline text-center text-2xl md:text-4xl mb-4 md:mb-8"
   >
     
     Latest news
