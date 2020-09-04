@@ -43,7 +43,7 @@
     "jest-junit": "^10.0.0",
     "jest-serializer-vue": "^2.0.2",
     "jest-vue-preprocessor": "^1.5.0",
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.13.1",
     "nodemon": "^2.0.2",
     "purgecss-webpack-plugin": "^1.6.0",
     "sass-loader": "^8.0.1",
